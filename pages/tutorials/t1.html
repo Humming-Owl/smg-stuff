@@ -1,0 +1,447 @@
+<html>
+
+<head>
+
+<title>How to import a cutom model into SMG1</title>
+
+<link rel="icon" type="image/png" href="../../images/icon.png" />
+
+<link rel="stylesheet" href="../../styles.css" type="text/css">
+
+</head>
+
+<body>
+
+<div class="start">
+
+<div class="title">
+
+<h1>How to import a custom model into SMG1</h1> 
+
+</div>
+
+</div>
+
+<div class="main">
+
+<div class="right">
+
+<h3><b>Contents</b></h3>
+
+<hr>
+
+<p>1. <a href="../../index.html">Introduction</a></p>
+
+<p>2. <a href="../tutorials.html">Tutorials</a></p>
+
+<p>3. <a href="../tools.html">Tools</a></p>
+
+<p>4. <a href="../other_links.html">Other links</a></p>
+
+</div>
+
+<div class="left">
+
+<h2><b>Tools needed</b></h2>
+<p>Refer to the "Tools" section for download.</p>
+
+<hr>
+
+<p>- Blender</p>
+<p>- SuperBMD</p>
+<p>- Collision Creator</p>
+<p>- Arc Convertor</p>
+<p>- Whitehole</p>
+<p>- Wiimm's ISO Tools (to get your SMG1 dump)</p>
+
+<br>
+
+<hr>
+
+<h2><b>Blender comment:</b></h2>
+
+<p> If you don’t know how to use Blender yet I suggest you to see these tutorials.</p>
+
+<p>English --> <a href="https://www.youtube.com/watch?v=x27hsbiqdP8&list=PLpdCRuhtdVcuwfyl97L7TjeChtx0k8vcb">https://www.youtube.com/watch?v=x27hsbiqdP8&list=PLpdCRuhtdVcuwfyl97L7TjeChtx0k8vcb</a></p>
+<p>Spanish --> <a href="https://www.youtube.com/watch?v=tAFTbbaKqSs&list=PLGW1bRAddcdrm6-Z12v9UBheJ7h9_j-aC">https://www.youtube.com/watch?v=tAFTbbaKqSs&list=PLGW1bRAddcdrm6-Z12v9UBheJ7h9_j-aC</a></p>
+<p>Watch the basic stuff (first videos) and try creating something not that difficult. When you start doing something you will get how stuff works on Blender and then you can search for the info you need on the web, but you have to understand the basic stuff first.</p>
+<p>If you wonder about the older Blender version, I believe newer versions also work; you can try them if you want. However I don’t need a newer version so I can stay with 2.79b.</p>
+
+<br>
+
+<hr>
+
+<h2><b>Warnings:</b></h2>
+<p>- If you want to use custom textures (textures not extracted from the game) be sure that they have sizes like 64x64, 128x128, 64x128, etc. (multiple of 2) otherwise Whitehole wont load your object!</p>
+<p>- Do not make any scale action in “Object Mode” only in “Edit Mode” if you scale while being in “Object Mode” the object will be messed up in game! (it won’t be in the right proportions).</p>
+<p>- As the objects in normal size in Blender are extremely tiny when imported on the game you can decide to scale them on Blender (Edit Mode only) or to scale them on Whitehole (I choose to scale them on Whitehole on this tutorial).</p>
+<p>- Set your model in Blender to have NO ANGLES against any axis if your model on Blender has an angle with an axis, the collision and the 3d model will be rotated that angle in game!</p>
+<p>- If your model appears white in Game/Whitehole you forgot to apply the materials or SuperBMD did not assign the textures to the model (maybe you moved the textures to another place and SuperBMD could not locate them).</p>
+<p>- If your model appears as a blue box then you missed something in the steps or did something else wrong (the error could be anywhere with this one).</p>
+
+<br>
+
+<hr>
+
+<h2><b>Steps:</b></h2>
+
+<p>- First I will assume you already have a model on Blender with no materials assigned. In this example I will work with several materials (Fig. 1).</p>
+
+<img src="../../images/t1/Fig 1.png">
+
+<b><p class="idtext">(Fig. 1 - Blender model example)</p></b>
+
+<br>
+
+<p>- Create the materials to be used on the model; this is important since it is how the model will look on game. To assign materials, go to the right section of Blender and click on the “Material” tab (Fig. 2).</p>
+
+<img src="../../images/t1/Fig 2.png">
+
+<b><p class="idtext">(Fig. 2 - Material tab)</p></b>
+
+<br>
+
+<p>- If you are creating the first material to be used on the model, a default material will be already there, if not then add a new material by clicking “+” (to add a new material slot) and then on the “New” button to add a material to that slot. Change its name to anything you want (you will need to know the materials name in the future) (Fig. 3). I will create 4 materials (metal1, wood1, cloth1 and light1), to add more than one material do the same mentioned above and change their names (Fig. 4).</p>
+
+<img src="../../images/t1/Fig 3.png">
+
+<b><p class="idtext">(Fig. 3 - Create materials)</p></b>
+
+<br>
+
+<img src="../../images/t1/Fig 4.png">
+
+<b><p class="idtext">(Fig. 4 - Example materials created)</p></b>
+
+<br>
+
+<p>- With that done, you need to assign a texture to all materials, to do that click on a material and go to the “Texture” tab (Fig. 5). If a default texture is in there then erase it and add a new one, if not then add a new texture with the “New” button (Fig. 5 and 6).</p>
+
+<img src="../../images/t1/Fig 5.png">
+
+<b><p class="idtext">(Fig. 5 - Texture tab)</p></b>
+
+<br>
+
+<img src="../../images/t1/Fig 6.png">
+
+<b><p class="idtext">(Fig. 6 - Example texture created)</p></b>
+
+<br>
+
+<p>- After creating a new texture it will appear what is showed on Fig. 6, click on “Open” and select the texture you want to assign to your material (Fig. 7 and 8). You can leave the texture name as you want (you don’t need to assign a name to it). Do this to all materials created (Fig. 9).</p>
+
+<img src="../../images/t1/Fig 7.png">
+
+<b><p class="idtext">(Fig. 7 - Texture search)</p></b>
+
+<br>
+
+<img src="../../images/t1/Fig 8.png">
+
+<b><p class="idtext">(Fig. 8 - Texture picture selected)</p></b>
+
+<br>
+
+<img src="../../images/t1/Fig 9.png">
+
+<b><p class="idtext">(Fig. 9 - All materials with textures assigned)</p></b>
+
+<br>
+
+<p>- After all that now is the time to assign the materials to the parts of the object we want the materials on. I want the “wood1” on the base of the lamp model, the “metal1” on the pole of the lamp, the “cloth1” on the cone part of the lamp and the “light1” on the base and top of the cone part of the lamp to simulate a light bulb on the lamp. To do this we have to enter “Edit Mode” (pressing Tab while the cursor is on the same location as the model), then change to face selection method, select the faces of the model in which we want our material to be added, click on the material that you want to assign to those faces and click on the “Assign” button after all that (Fig. 10a, 10b, 10c, 10d).</p> 
+
+<img src="../../images/t1/Fig 10a.png">
+
+<b><p class="idtext">(Fig. 10a - Assign "wood1" to respective faces of model)</p></b>
+
+<br>
+
+<img src="../../images/t1/Fig 10b.png">
+
+<b><p class="idtext">(Fig. 10b - Assign "metal1" to respective faces of model)</p></b>
+
+<br>
+
+<img src="../../images/t1/Fig 10c.png">
+
+<b><p class="idtext">(Fig. 10c - Assign "cloth1" to respective faces of model)</p></b>
+
+<br>
+
+<img src="../../images/t1/Fig 10d.png">
+
+<b><p class="idtext">(Fig. 10d - Assign "light1" to respective faces of model)</p></b>
+
+<br>
+
+<p>- To view your materials assigned to the model click on every material, scroll down and set the “Emit” option of each material to 1 and then change to “Material view” (Fig. 11 and 12).</p>
+
+<img src="../../images/t1/Fig 11.png">
+
+<b><p class="idtext">(Fig. 11 - Change material "Emit" option)</p></b>
+
+<br>
+
+<img src="../../images/t1/Fig 12.png">
+
+<b><p class="idtext">(Fig. 12 - All materials with changed "Emit" option)</p></b>
+
+<br>
+
+<p>- You might see that the colors of your textures are applied to the faces but not the image textures (Fig. 12). To solve this you have to unwrap your object: on “Edit Mode” double press A to select all faces of the model, press U and select “Unwrap” (you can also select “Smart UV Project” they do different stuff and in some cases it is preferable the effect of one in relation to the other) (Fig. 13 and 14).</p>
+
+<img src="../../images/t1/Fig 13.png">
+
+<b><p class="idtext">(Fig. 13 - Unwrap procedure)</p></b>
+
+<br>
+
+<img src="../../images/t1/Fig 14.png">
+
+<b><p class="idtext">(Fig. 14 - Unwrap effect)</p></b>
+
+<br>
+
+<p>- My textures did not assign very well so I had to adjust them a little (assigned “Smart UV Project” to the faces of the cone part of the lamp and also scaled the image of the “light1” material in UV Editing so more light is seen) (Fig. 15).</p>
+
+<img src="../../images/t1/Fig 15.png">
+
+<b><p class="idtext">(Fig. 15 - Smart UV Project effect)</p></b>
+
+<br>
+
+<p>- Now you have to apply a triangulate modifier to the model, click on “Modifiers”, “Add Modifier”, “Triangulate” , verify that you are on “Object Mode”, select your model and then click on “Apply” (this is done because the collision of the object depends on triangles, if your model is not triangulated you will pass through it on game) (Fig. 16 and 17).</p>
+
+<img src="../../images/t1/Fig 16.png">
+
+<b><p class="idtext">(Fig. 16 - Triangulate modifier)</p></b>
+
+<br>
+
+<img src="../../images/t1/Fig 17.png">
+
+<b><p class="idtext">(Fig. 17 - Applying triangulate modifier)</p></b>
+
+<br>
+
+<p>- At this point the object is ready (to continue with the tutorial), if you want to apply other modifiers and detail your model a little more and such you will have to learn how to use Blender better from tutorials in Youtube (don’t try difficult stuff at start, you will get frustrated, do SM64 or OoT like-objects first, at the end when you get the rhythm of it you will get better making more defined and detailed objects).</p>
+
+<p>- Export the object as an FBX file and an OBJ file (to a known location) by going to File > Export (Fig. 18). Name both files the same (the OBJ will come with an MTL file) (Fig. 19 and 20). Try putting the FBX, OBJ and MTL files in the same directory as the textures you used, this is in case you are working in various computers to not get errors with the textures (like me) (Fig. 21).</p>
+
+<img src="../../images/t1/Fig 18.png">
+
+<b><p class="idtext">(Fig. 18 - Export option)</p></b>
+
+<br>
+
+<img src="../../images/t1/Fig 19.png">
+
+<b><p class="idtext">(Fig. 19 - FBX file export)</p></b>
+
+<br>
+
+<img src="../../images/t1/Fig 20.png">
+
+<b><p class="idtext">(Fig. 20 - OBJ file export)</p></b>
+
+<br>
+
+<img src="../../images/t1/Fig 21.png">
+
+<b><p class="idtext">(Fig. 21 - Folder containing textures and exported Blender files)</p></b>
+
+<br>
+
+<p>-  Now you can close Blender (save your project files in case you commit an error you can get back and fix it) and we are going to enter the file conversion part of the tutorial to be able to get a file of the model we’ve got that can be introduced in the game.</p>
+
+<p>- We will be using 3 programs of the 5 mentioned at the beginning of the tutorial: SuperBMD, Collision Creator and Arc Covertor. Be sure to have them in respective folders to use them (Fig. 22).</p>
+
+<img src="../../images/t1/Fig 22.png">
+
+<b><p class="idtext">(Fig. 22 - Tools organized in folders)</p></b>
+
+<p>- First locate where all your needed files are (Fig. 23).</p>
+
+<br>
+
+<img src="../../images/t1/Fig 23.png">
+
+<b><p class="idtext">(Fig. 23 - Textures and exported Blender files folder)</p></b>
+
+<br>
+
+<p>- Open a New window and in that window locate the SuperBMD tool (Fig. 24) (keep the window of your needed files open). Drag and drop the FBX file into the “superbmd_rotate.bat”. A BMD file will appear in the same folder as the FBX file (this is a file that contains your model) (Fig. 25).</p>
+
+<img src="../../images/t1/Fig 24.png">
+
+<b><p class="idtext">(Fig. 24 - SuperBMD tool folder)</p></b>
+
+<br>
+
+<img src="../../images/t1/Fig 25.png">
+
+<b><p class="idtext">(Fig. 25 - BMD file creation)</p></b>
+
+<br>
+
+<p>- Locate the Collision Creator tool and drag and drop the OBJ file into the “collision_creator.exe”. A terminal and a window will appear (Fig. 26).</p>
+
+<img src="../../images/t1/Fig 26.png">
+
+<b><p class="idtext">(Fig. 26 - Collision Creator tool)</p></b>
+
+<br>
+
+<p>- Set the “Sound Code”, “Floor Code” and “Wall Code” to the values you want for each material:</p>
+
+<p>1) Sound Code: the sound that the material emits when Mario steps on it.</p>
+
+<p>2) Floor Code: the properties the floor has that affects Mario when stepping into the material.</p>
+
+<p>3) Wall Code: the property the wall has that affects Mario when wall grabbing to the material.</p>
+
+<p>I don’t know about the other options yet so I won’t explain them.</p>
+
+<p>- I will only modify the “Sound Code” of each material since this is not a very complicated object. I will set the “Metal” value to the “metal1” material (Fig. 27a), “Wood Thin” to the “wood1” material (Fig. 27b), “Carpet” to the “cloth1” material (Fig. 27c) and “Cloud” to the “light1” material (didn’t knew what to assign to a light as sound to be honest) (Fig. 27d).</p>
+
+<img src="../../images/t1/Fig 27a.png">
+
+<b><p class="idtext">(Fig. 27a - "metal1" sound code)</p></b>
+
+<br>
+
+<img src="../../images/t1/Fig 27b.png">
+
+<b><p class="idtext">(Fig. 27b - "wood1" sound code)</p></b>
+
+<br>
+
+<img src="../../images/t1/Fig 27c.png">
+
+<b><p class="idtext">(Fig. 27c - "cloth1" sound code)</p></b>
+
+<br>
+
+<img src="../../images/t1/Fig 27d.png">
+
+<b><p class="idtext">(Fig. 27d - "light1" sound code)</p></b>
+
+<br>
+
+<p>- After that click on “File” and then “Save” and then you can close the program. A KCL and PA files will appear on the same folder as the OBJ file (Fig. 28). These are the collision files for your object in game.</p>
+
+<img src="../../images/t1/Fig 28.png">
+
+<b><p class="idtext">(Fig. 28 - KCL and PA files creation)</p></b>
+
+<br>
+
+<p>- Create a folder named exactly as your model without the file extension (in my case it will be named “tutorial1”) and place the BMD, KCL and PA files inside of it (Fig. 29a and 29b).</p>
+
+<img src="../../images/t1/Fig 29a.png">
+
+<b><p class="idtext">(Fig. 29a - Folder creation)</p></b>
+
+<br>
+
+<img src="../../images/t1/Fig 29b.png">
+
+<b><p class="idtext">(Fig. 29b - BMD, KCL and PA files inside folder)</p></b>
+
+<br>
+
+<p>- Then in the other window go to the place the Arc Convertor tool is and drag and drop the folder created to the “arcPack.exe”. An ARC file will appear in the same folder as the folder is (Fig. 30). Now drag and drop the ARC file into the “yaz0enc.exe”, then an ARC.YAZ0 file will appear in the same folder the ARC file is (Fig. 31).</p>
+
+<img src="../../images/t1/Fig 30.png">
+
+<b><p class="idtext">(Fig. 30 - ARC file creation)</p></b>
+
+<br>
+
+<img src="../../images/t1/Fig 31.png">
+
+<b><p class="idtext">(Fig. 31 - ARC.YAZ0 file creation)</p></b>
+
+<br>
+
+<p>- Eliminate the first ARC file (you don’t need it anymore) and rename the ARC.YAZ0 file to ARC only. That file will be the one that you will import into the game through Whitehole.</p>
+
+<p>- Copy the ARC file got into the “ObjectData” folder of your SMG1 dump and then open Whitehole. Go to Tools > BCSV Editor > Open > Objects > PlanetMapDataTable. You should be on a large table (Fig. 32).</p>
+
+<img src="../../images/t1/Fig 32.png">
+
+<b><p class="idtext">(Fig. 32 - PlanetMapDataTable in Whitehole's BCSV editor)</p></b>
+
+<br>
+
+<p>- Click on “Add row” and scroll down to the end of the table. In the empty row added type from left to right the following: Name of your object, 0, 0, 0, 0 and 0 (Fig. 33) (in my case the name is “tutorial1”). Click save and open the galaxy you want your model in (I will choose “AstroGalaxy”) (Fig. 34).</p>
+
+<img src="../../images/t1/Fig 33.png">
+
+<b><p class="idtext">(Fig. 33 - Create and fill new row)</p></b>
+
+<br>
+
+<img src="../../images/t1/Fig 34.png">
+
+<b><p class="idtext">(Fig. 34 - "AstroGalaxy" galaxy opened on Whitehole)</p></b>
+
+<br>
+
+<p>- Add an object through Objects > Add object > Normal, input your desired object on the search bar (I will choose a simple coin) and place it anywhere on the galaxy (Fig. 35). Then click on the object and change its “Object” property to the name of the model you created (press Enter). Scale it to a viewable size and BAM the model should appear (Fig. 36a and 36b).</p>
+
+<img src="../../images/t1/Fig 35.png">
+
+<b><p class="idtext">(Fig. 35 - A "Coin" placed on the galaxy)</p></b>
+
+<br>
+
+<img src="../../images/t1/Fig 36a.png">
+
+<b><p class="idtext">(Fig. 36a - Changing the "Coin" properties)</p></b>
+
+<br>
+
+<img src="../../images/t1/Fig 36b.png">
+
+<b><p class="idtext">(Fig. 36b - Model imported into the galaxy)</p></b>
+
+<br>
+
+<p>- Now to test it on game! (Either with Dolphin or with Riivolution) (Fig. 37)</p>
+
+<img src="../../images/t1/Fig 37.jpeg">
+
+<b><p class="idtext">(Fig. 37 - Mario standing over the model on game - Sorry for the bad quality)</p></b>
+
+<br>
+
+<hr>
+
+<p>My "tutorial1" model and textures file --> <a href="https://www.mediafire.com/folder/p0ggix2rpoq2a/tutorial1">https://www.mediafire.com/folder/p0ggix2rpoq2a/tutorial1</a></p>
+
+<hr>
+
+<h2><b>Extra stuff:</b></h2>
+
+<p>I’ve made a little BATCH script to simplify the process with SuperBMD, Collision Creator and the Arc Convertor tools. However it will only work with the folder distribution I have on the ZIP file I shared otherwise you will have to edit the script. The demonstration is at the end of my Youtube video.</p>
+
+<p>ZIP file mentioned and original video --> <a href="https://www.mediafire.com/folder/2l6706ajky6t4/SMG_Stuff">https://www.mediafire.com/folder/2l6706ajky6t4/SMG_Stuff</a></p>
+<p>Youtube video --> <a href="https://www.youtube.com/watch?v=kNod9yI1IOo&t">https://www.youtube.com/watch?v=kNod9yI1IOo&t</a></p>
+
+<br>
+
+<hr>
+
+<h2><b>Other tutorials (I learned from them how to do this):</b></h2>
+<p>By Luma48 --> <a href="https://www.youtube.com/watch?v=cYg3ea2ihpY&t=0s">https://www.youtube.com/watch?v=cYg3ea2ihpY&t=0s</a></p>
+<p>By Alex SMG --> <a href="https://www.youtube.com/watch?v=5LoPi4fNo9Y&t=0s">https://www.youtube.com/watch?v=5LoPi4fNo9Y&t=0s</a></p>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
