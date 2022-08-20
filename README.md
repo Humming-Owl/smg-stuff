@@ -1,5 +1,6 @@
 # smg-stuff
 https://humming-owl.github.io/smg-stuff/ 
+
 A website containing SMG related stuff.
 
 # Contribute
