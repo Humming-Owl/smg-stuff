@@ -1,6 +1,6 @@
 body {
 
-line-height: 21px;
+line-height: 24px;
 background-color: #191919;
 font-family: Arial;
 width: 100%;
@@ -52,3 +52,8 @@ width: 100%;}
 
 text-align: center;
 width: 100%;}
+
+code {
+
+background-color: white;
+padding: 1px;}
