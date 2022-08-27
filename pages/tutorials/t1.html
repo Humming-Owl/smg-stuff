@@ -2,7 +2,7 @@
 
 <head>
 
-<title>How to import a cutom model into SMG1</title>
+<title>How to import a custom model into SMG1</title>
 
 <link rel="icon" type="image/png" href="../../images/icon.png" />
 
@@ -73,9 +73,9 @@
 
 <h2><b>Warnings:</b></h2>
 <p>- If you want to use custom textures (textures not extracted from the game) be sure that they have sizes like 64x64, 128x128, 64x128, etc. (multiple of 2) otherwise Whitehole wont load your object!</p>
-<p>- Do not make any scale action in “Object Mode” only in “Edit Mode” if you scale while being in “Object Mode” the object will be messed up in game! (it won’t be in the right proportions).</p>
+<p>- Do not make any scale action in "<code>Object Mode</code>" only in "<code>Edit Mode</code>" if you scale while being in "<code>Object Mode</code>" the object will be messed up in game! (it won’t be in the right proportions).</p>
 <p>- As the objects in normal size in Blender are extremely tiny when imported on the game you can decide to scale them on Blender (Edit Mode only) or to scale them on Whitehole (I choose to scale them on Whitehole on this tutorial).</p>
-<p>- Set your model in Blender to have NO ANGLES against any axis if your model on Blender has an angle with an axis, the collision and the 3d model will be rotated that angle in game! Also, set the object to the origin of coordinates in Blender (x=0, y=0, z=0)</p>
+<p>- Set your model in Blender to have NO ANGLES against any axis if your model on Blender has an angle with an axis, the collision and the 3d model will be rotated that angle in game!</p>
 <p>- If your model appears white in Game/Whitehole you forgot to apply the materials or SuperBMD did not assign the textures to the model (maybe you moved the textures to another place and SuperBMD could not locate them).</p>
 <p>- If your model appears as a blue box then you missed something in the steps or did something else wrong (the error could be anywhere with this one).</p>
 
@@ -93,7 +93,7 @@
 
 <br>
 
-<p>- Create the materials to be used on the model; this is important since it is how the model will look on game. To assign materials, go to the right section of Blender and click on the “Material” tab (Fig. 2).</p>
+<p>- Create the materials to be used on the model; this is important since it is how the model will look on game. To assign materials, go to the right section of Blender and click on the "<code>Material</code>" tab (Fig. 2).</p>
 
 <img src="../../images/t1/Fig 2.png">
 
@@ -101,7 +101,7 @@
 
 <br>
 
-<p>- If you are creating the first material to be used on the model, a default material will be already there, if not then add a new material by clicking “+” (to add a new material slot) and then on the “New” button to add a material to that slot. Change its name to anything you want (you will need to know the materials name in the future) (Fig. 3). I will create 4 materials (metal1, wood1, cloth1 and light1), to add more than one material do the same mentioned above and change their names (Fig. 4).</p>
+<p>- If you are creating the first material to be used on the model, a default material will be already there, if not then add a new material by clicking "<code>+</code>" (to add a new material slot) and then on the "<code>New</code>" button to add a material to that slot. Change its name to anything you want (you will need to know the materials name in the future) (Fig. 3). I will create 4 materials ("<code>metal1</code>", "<code>wood1</code>", "<code>cloth1</code>" and "<code>light1</code>"), to add more than one material do the same mentioned above and change their names (Fig. 4).</p>
 
 <img src="../../images/t1/Fig 3.png">
 
@@ -115,7 +115,7 @@
 
 <br>
 
-<p>- With that done, you need to assign a texture to all materials, to do that click on a material and go to the “Texture” tab (Fig. 5). If a default texture is in there then erase it and add a new one, if not then add a new texture with the “New” button (Fig. 5 and 6).</p>
+<p>- With that done, you need to assign a texture to all materials, to do that click on a material and go to the "<code>Texture</code>" tab (Fig. 5). If a default texture is in there then erase it and add a new one, if not then add a new texture with the "<code>New</code>” button (Fig. 5 and 6).</p>
 
 <img src="../../images/t1/Fig 5.png">
 
@@ -129,7 +129,7 @@
 
 <br>
 
-<p>- After creating a new texture it will appear what is showed on Fig. 6, click on “Open” and select the texture you want to assign to your material (Fig. 7 and 8). You can leave the texture name as you want (you don’t need to assign a name to it). Do this to all materials created (Fig. 9).</p>
+<p>- After creating a new texture it will appear what is showed on Fig. 6, click on "<code>Open</code>” and select the texture you want to assign to your material (Fig. 7 and 8). You can leave the texture name as you want (you don’t need to assign a name to it). Do this to all materials created (Fig. 9).</p>
 
 <img src="../../images/t1/Fig 7.png">
 
@@ -149,47 +149,47 @@
 
 <br>
 
-<p>- After all that now is the time to assign the materials to the parts of the object we want the materials on. I want the “wood1” on the base of the lamp model, the “metal1” on the pole of the lamp, the “cloth1” on the cone part of the lamp and the “light1” on the base and top of the cone part of the lamp to simulate a light bulb on the lamp. To do this we have to enter “Edit Mode” (pressing Tab while the cursor is on the same location as the model), then change to face selection method, select the faces of the model in which we want our material to be added, click on the material that you want to assign to those faces and click on the “Assign” button after all that (Fig. 10a, 10b, 10c, 10d).</p> 
+<p>- After all that now is the time to assign the materials to the parts of the object we want the materials on. I want the "<code>wood1</code>" on the base of the lamp model, the "<code>metal1</code>" on the pole of the lamp, the "<code>cloth1</code>" on the cone part of the lamp and the "<code>light1</code>" on the base and top of the cone part of the lamp to simulate a light bulb on the lamp. To do this we have to enter "<code>Edit Mode</code>" (pressing Tab while the cursor is on the same location as the model), then change to face selection method, select the faces of the model in which we want our material to be added, click on the material that you want to assign to those faces and click on the "<code>Assign</code>" button after all that (Fig. 10a, 10b, 10c, 10d).</p> 
 
 <img src="../../images/t1/Fig 10a.png">
 
-<b><p class="idtext">(Fig. 10a - Assign "wood1" to respective faces of model)</p></b>
+<b><p class="idtext">(Fig. 10a - Assign "<code>wood1</code>" to respective faces of model)</p></b>
 
 <br>
 
 <img src="../../images/t1/Fig 10b.png">
 
-<b><p class="idtext">(Fig. 10b - Assign "metal1" to respective faces of model)</p></b>
+<b><p class="idtext">(Fig. 10b - Assign "<code>metal1</code>" to respective faces of model)</p></b>
 
 <br>
 
 <img src="../../images/t1/Fig 10c.png">
 
-<b><p class="idtext">(Fig. 10c - Assign "cloth1" to respective faces of model)</p></b>
+<b><p class="idtext">(Fig. 10c - Assign "<code>cloth1</code>" to respective faces of model)</p></b>
 
 <br>
 
 <img src="../../images/t1/Fig 10d.png">
 
-<b><p class="idtext">(Fig. 10d - Assign "light1" to respective faces of model)</p></b>
+<b><p class="idtext">(Fig. 10d - Assign "<code>light1</code>" to respective faces of model)</p></b>
 
 <br>
 
-<p>- To view your materials assigned to the model click on every material, scroll down and set the “Emit” option of each material to 1 and then change to “Material view” (Fig. 11 and 12).</p>
+<p>- To view your materials assigned to the model click on every material, scroll down and set the "<code>Emit</code>" option of each material to 1 and then change to "<code>Material view</code>" (Fig. 11 and 12).</p>
 
 <img src="../../images/t1/Fig 11.png">
 
-<b><p class="idtext">(Fig. 11 - Change material "Emit" option)</p></b>
+<b><p class="idtext">(Fig. 11 - Change material "<code>Emit</code>" option)</p></b>
 
 <br>
 
 <img src="../../images/t1/Fig 12.png">
 
-<b><p class="idtext">(Fig. 12 - All materials with changed "Emit" option)</p></b>
+<b><p class="idtext">(Fig. 12 - All materials with changed "<code>Emit</code>" option)</p></b>
 
 <br>
 
-<p>- You might see that the colors of your textures are applied to the faces but not the image textures (Fig. 12). To solve this you have to unwrap your object: on “Edit Mode” double press A to select all faces of the model, press U and select “Unwrap” (you can also select “Smart UV Project” they do different stuff and in some cases it is preferable the effect of one in relation to the other) (Fig. 13 and 14).</p>
+<p>- You might see that the colors of your textures are applied to the faces but not the image textures (Fig. 12). To solve this you have to unwrap your object: on "<code>Edit Mode</code>" double press A to select all faces of the model, press U and select "<code>Unwrap</code>" (you can also select "<code>Smart UV Project</code>" they do different stuff and in some cases it is preferable the effect of one in relation to the other) (Fig. 13 and 14).</p>
 
 <img src="../../images/t1/Fig 13.png">
 
@@ -203,7 +203,7 @@
 
 <br>
 
-<p>- My textures did not assign very well so I had to adjust them a little (assigned “Smart UV Project” to the faces of the cone part of the lamp and also scaled the image of the “light1” material in UV Editing so more light is seen) (Fig. 15).</p>
+<p>- My textures did not assign very well so I had to adjust them a little (assigned "<code>Smart UV Project</code>" to the faces of the cone part of the lamp and also scaled the image of the "<code>light1</code>" material in UV Editing so more light is seen) (Fig. 15).</p>
 
 <img src="../../images/t1/Fig 15.png">
 
@@ -211,7 +211,7 @@
 
 <br>
 
-<p>- Now you have to apply a triangulate modifier to the model, click on “Modifiers”, “Add Modifier”, “Triangulate” , verify that you are on “Object Mode”, select your model and then click on “Apply” (this is done because the collision of the object depends on triangles, if your model is not triangulated you will pass through it on game) (Fig. 16 and 17).</p>
+<p>- Now you have to apply a triangulate modifier to the model, click on "<code>Modifiers</code>", "<code>Add Modifier</code>", "<code>Triangulate</code>" , verify that you are on "<code>Object Mode</code>", select your model and then click on "<code>Apply</code>" (this is done because the collision of the object depends on triangles, if your model is not triangulated you will pass through it on game) (Fig. 16 and 17).</p>
 
 <img src="../../images/t1/Fig 16.png">
 
@@ -261,9 +261,9 @@
 
 <b><p class="idtext">(Fig. 22 - Tools organized in folders)</p></b>
 
-<p>- First locate where all your needed files are (Fig. 23).</p>
-
 <br>
+
+<p>- First locate where all your needed files are (Fig. 23).</p>
 
 <img src="../../images/t1/Fig 23.png">
 
@@ -271,7 +271,7 @@
 
 <br>
 
-<p>- Open a New window and in that window locate the SuperBMD tool (Fig. 24) (keep the window of your needed files open). Drag and drop the FBX file into the “superbmd_rotate.bat”. A BMD file will appear in the same folder as the FBX file (this is a file that contains your model) (Fig. 25).</p>
+<p>- Open a New window and in that window locate the SuperBMD tool (Fig. 24) (keep the window of your needed files open). Drag and drop the FBX file into the “<code>superbmd_rotate.bat</code>”. A BMD file will appear in the same folder as the FBX file (this is a file that contains your model) (Fig. 25).</p>
 
 <img src="../../images/t1/Fig 24.png">
 
@@ -285,7 +285,7 @@
 
 <br>
 
-<p>- Locate the Collision Creator tool and drag and drop the OBJ file into the “collision_creator.exe”. A terminal and a window will appear (Fig. 26).</p>
+<p>- Locate the Collision Creator tool and drag and drop the OBJ file into the “<code>collision_creator.exe</code>”. A terminal and a window will appear (Fig. 26).</p>
 
 <img src="../../images/t1/Fig 26.png">
 
@@ -293,43 +293,43 @@
 
 <br>
 
-<p>- Set the “Sound Code”, “Floor Code” and “Wall Code” to the values you want for each material:</p>
+<p>- Set the “<code>Sound Code</code>”, “<code>Floor Code</code>” and “<code>Wall Code</code>” to the values you want for each material:</p>
 
-<p>1) Sound Code: the sound that the material emits when Mario steps on it.</p>
+<p><b>1)</b> Sound Code: the sound that the material emits when Mario steps on it.</p>
 
-<p>2) Floor Code: the properties the floor has that affects Mario when stepping into the material.</p>
+<p><b>2)</b> Floor Code: the properties the floor has that affects Mario when stepping into the material.</p>
 
-<p>3) Wall Code: the property the wall has that affects Mario when wall grabbing to the material.</p>
+<p><b>3)</b> Wall Code: the property the wall has that affects Mario when wall grabbing to the material.</p>
 
 <p>I don’t know about the other options yet so I won’t explain them.</p>
 
-<p>- I will only modify the “Sound Code” of each material since this is not a very complicated object. I will set the “Metal” value to the “metal1” material (Fig. 27a), “Wood Thin” to the “wood1” material (Fig. 27b), “Carpet” to the “cloth1” material (Fig. 27c) and “Cloud” to the “light1” material (didn’t knew what to assign to a light as sound to be honest) (Fig. 27d).</p>
+<p>- I will only modify the “<code>Sound Code</code>” of each material since this is not a very complicated object. I will set the “<code>Metal</code>” value to the “<code>metal1</code>” material (Fig. 27a), “<code>Wood Thin</code>” to the “<code>wood1</code>” material (Fig. 27b), “<code>Carpet</code>” to the “<code>cloth1</code>” material (Fig. 27c) and “<code>Cloud</code>” to the “<code>light1</code>” material (didn’t knew what to assign to a light as sound to be honest) (Fig. 27d).</p>
 
 <img src="../../images/t1/Fig 27a.png">
 
-<b><p class="idtext">(Fig. 27a - "metal1" sound code)</p></b>
+<b><p class="idtext">(Fig. 27a - “<code>metal1</code>” sound code)</p></b>
 
 <br>
 
 <img src="../../images/t1/Fig 27b.png">
 
-<b><p class="idtext">(Fig. 27b - "wood1" sound code)</p></b>
+<b><p class="idtext">(Fig. 27b - “<code>wood1</code>” sound code)</p></b>
 
 <br>
 
 <img src="../../images/t1/Fig 27c.png">
 
-<b><p class="idtext">(Fig. 27c - "cloth1" sound code)</p></b>
+<b><p class="idtext">(Fig. 27c - “<code>cloth1</code>” sound code)</p></b>
 
 <br>
 
 <img src="../../images/t1/Fig 27d.png">
 
-<b><p class="idtext">(Fig. 27d - "light1" sound code)</p></b>
+<b><p class="idtext">(Fig. 27d - “<code>light1</code>” sound code)</p></b>
 
 <br>
 
-<p>- After that click on “File” and then “Save” and then you can close the program. A KCL and PA files will appear on the same folder as the OBJ file (Fig. 28). These are the collision files for your object in game.</p>
+<p>- After that click on “<code>File</code>” and then “<code>Save</code>” and then you can close the program. A KCL and PA files will appear on the same folder as the OBJ file (Fig. 28). These are the collision files for your object in game.</p>
 
 <img src="../../images/t1/Fig 28.png">
 
@@ -337,7 +337,7 @@
 
 <br>
 
-<p>- Create a folder named exactly as your model without the file extension (in my case it will be named “tutorial1”) and place the BMD, KCL and PA files inside of it (Fig. 29a and 29b).</p>
+<p>- Create a folder named exactly as your model without the file extension (in my case it will be named “<code>tutorial1</code>”) and place the BMD, KCL and PA files inside of it (Fig. 29a and 29b).</p>
 
 <img src="../../images/t1/Fig 29a.png">
 
@@ -351,7 +351,7 @@
 
 <br>
 
-<p>- Then in the other window go to the place the Arc Convertor tool is and drag and drop the folder created to the “arcPack.exe”. An ARC file will appear in the same folder as the folder is (Fig. 30). Now drag and drop the ARC file into the “yaz0enc.exe”, then an ARC.YAZ0 file will appear in the same folder the ARC file is (Fig. 31).</p>
+<p>- Then in the other window go to the place the Arc Convertor tool is and drag and drop the folder created to the “<code>arcPack.exe</code>”. An ARC file will appear in the same folder as the folder is (Fig. 30). Now drag and drop the ARC file into the “<code>yaz0enc.exe</code>”, then an ARC.YAZ0 file will appear in the same folder the ARC file is (Fig. 31).</p>
 
 <img src="../../images/t1/Fig 30.png">
 
@@ -367,7 +367,7 @@
 
 <p>- Eliminate the first ARC file (you don’t need it anymore) and rename the ARC.YAZ0 file to ARC only. That file will be the one that you will import into the game through Whitehole.</p>
 
-<p>- Copy the ARC file got into the “ObjectData” folder of your SMG1 dump and then open Whitehole. Go to Tools > BCSV Editor > Open > Objects > PlanetMapDataTable. You should be on a large table (Fig. 32).</p>
+<p>- Copy the ARC file got into the “<code>ObjectData</code>” folder of your SMG1 dump and then open Whitehole. Go to “<code>Tools > BCSV Editor > Open > Objects > PlanetMapDataTable</code>". You should be on a large table (Fig. 32).</p>
 
 <img src="../../images/t1/Fig 32.png">
 
@@ -375,7 +375,7 @@
 
 <br>
 
-<p>- Click on “Add row” and scroll down to the end of the table. In the empty row added type from left to right the following: Name of your object, 0, 0, 0, 0 and 0 (Fig. 33) (in my case the name is “tutorial1”). Click save and open the galaxy you want your model in (I will choose “AstroGalaxy”) (Fig. 34).</p>
+<p>- Click on “<code>Add row</code>” and scroll down to the end of the table. In the empty row added type from left to right the following: Name of your object, 0, 0, 0, 0 and 0 (Fig. 33) (in my case the name is “<code>tutorial1</code>”). Click save and open the galaxy you want your model in (I will choose “<code>AstroGalaxy</code>”) (Fig. 34).</p>
 
 <img src="../../images/t1/Fig 33.png">
 
@@ -385,21 +385,21 @@
 
 <img src="../../images/t1/Fig 34.png">
 
-<b><p class="idtext">(Fig. 34 - "AstroGalaxy" galaxy opened on Whitehole)</p></b>
+<b><p class="idtext">(Fig. 34 - “<code>AstroGalaxy</code>" galaxy opened on Whitehole)</p></b>
 
 <br>
 
-<p>- Add an object through Objects > Add object > Normal, input your desired object on the search bar (I will choose a simple coin) and place it anywhere on the galaxy (Fig. 35). Then click on the object and change its “Object” property to the name of the model you created (press Enter). Scale it to a viewable size and BAM the model should appear (Fig. 36a and 36b).</p>
+<p>- Add an object through “<code>Objects > Add object > Normal</code>", input your desired object on the search bar (I will choose a simple coin) and place it anywhere on the galaxy (Fig. 35). Then click on the object and change its “<code>Object</code>" property to the name of the model you created (press Enter). Scale it to a viewable size and BAM the model should appear (Fig. 36a and 36b).</p>
 
 <img src="../../images/t1/Fig 35.png">
 
-<b><p class="idtext">(Fig. 35 - A "Coin" placed on the galaxy)</p></b>
+<b><p class="idtext">(Fig. 35 - A “<code>Coin</code>" placed on the galaxy)</p></b>
 
 <br>
 
 <img src="../../images/t1/Fig 36a.png">
 
-<b><p class="idtext">(Fig. 36a - Changing the "Coin" properties)</p></b>
+<b><p class="idtext">(Fig. 36a - Changing the “<code>Coin</code>" properties)</p></b>
 
 <br>
 
@@ -419,7 +419,7 @@
 
 <hr>
 
-<p>My "tutorial1" model and textures file --> <a href="https://www.mediafire.com/folder/p0ggix2rpoq2a/tutorial1">https://www.mediafire.com/folder/p0ggix2rpoq2a/tutorial1</a></p>
+<p>My “<code>tutorial1</code>" model and textures file --> <a href="https://www.mediafire.com/folder/p0ggix2rpoq2a/tutorial1">https://www.mediafire.com/folder/p0ggix2rpoq2a/tutorial1</a></p>
 
 <hr>
 
