@@ -1,0 +1,255 @@
+<html>
+
+<head>
+
+<title>How to import a custom model with 2 or more in-game materials</title>
+
+<link rel="icon" type="image/png" href="../../images/icon.png" />
+
+<link rel="stylesheet" href="../../styles.css" type="text/css">
+
+</head>
+
+<body>
+
+<div class="start">
+
+<div class="title">
+
+<h1>How to import a custom model with 2 or more in-game materials</h1> 
+
+</div>
+
+</div>
+
+<div class="main">
+
+<div class="right">
+
+<h3><b>Contents</b></h3>
+
+<hr>
+
+<p>1. <a href="../../index.html">Introduction</a></p>
+
+<p>2. <a href="../tutorials.html">Tutorials</a></p>
+
+<p>3. <a href="../tools.html">Tools</a></p>
+
+<p>4. <a href="../other_links.html">Other links</a></p>
+
+</div>
+
+<div class="left">
+
+<h2><b>Tools needed</b></h2>
+<p>Refer to the "Tools" section for download.</p>
+
+<hr>
+
+<p>- Blender</p>
+<p>- SuperBMD</p>
+<p>- j3dview</p>
+<p>- Any text editor you like (Notepad++ is recommended)</p>
+<p>- Collision Creator</p>
+<p>- Arc Convertor</p>
+<p>- Whitehole</p>
+<p>- Wiimm's ISO Tools (to get your SMG1 dump)</p>
+
+<br>
+
+<hr>
+
+<h2><b>Required tutorials:</b></h2>
+
+<p>- <a href="t1.html">How to import a custom model into SMG1</a></p>
+<p>- <a href="t2.html">How to import a custom model into SMG1 with 1 in-game material</a></p>
+
+<br>
+
+<hr>
+
+<h2><b>Warnings:</b></h2>
+<p>- You don’t need to use in-game materials all the time to build your models, just use them when you need to add “special” effects to your imported objects (mostly shining when rotating the camera or if they include a special animation like water, lava, sand, etc.).</p>
+
+<br>
+
+<hr>
+
+<h2><b>Steps:</b></h2>
+
+<p>- Find in "<code>Whitehole</code>” the objects that have the materials you want. As I want to import a couch to the game (Rosalina just cannot let the poor plumber rest so I will gift him a couch) (<b>Fig. 1</b>) I need at least more than 1 material for this object, 3 to be exact (so it looks more like a real couch). In this example all the materials I need are in the planet shown on <b>Fig. 2</b> ("<code>DiskGardenPlanet</code>"). You can extract your materials from several objects (you will have to deal with more JSON files) but to keep the tutorial simple I extract my materials from a single object from the game. </p>
+
+<img src="../../images/t3/Fig 1.png">
+
+<b><p class="idtext">(Fig. 1 - Tutorial 3 model example - Couch)</p></b>
+
+<br>
+
+<img src="../../images/t3/Fig 2.png">
+
+<b><p class="idtext">(Fig. 2 - Planet with the materials I want)</p></b>
+
+<br>
+
+<p>- Get the ARC file associated with the selected model ("<code>ObjectData</code>” folder of SMG1 dump), put the ARC file in a known directory to work with it, extract its contents ("<code>Arc Convertor</code>”) and extract the contents from the BMD/BDL file ("<code>SuperBMD</code>”). You will get then the files needed to get the materials for your imported model (DAE, JSON and PNG) (<b>Fig. 3</b>).</p>
+
+<img src="../../images/t3/Fig 3.png">
+
+<b><p class="idtext">(Fig. 3 - All files extracted from the planet's model file)</p></b>
+
+<br>
+
+<p>- To get the material's name, one way is like the one explained on the previous tutorial: open the DAE file of the object in "<code>Blender</code>", search for the place the material you wanted is and then after clicking on it you will get its name being reflected on <code>Blender</code>’s material tab (that for each material) but another way (if you are really sure that the material texture is strictly assigned to your material only) search for the texture associated to the material you want (the PNG files) and locate the material that has that texture on the materials JSON file. For example, the 3 materials I want are displayed on <b>Fig. 4a and 4b</b>. If trying to search for the wood-like texture among the PNG files extracted, the PNG file associated to that texture is called "<code>EdenWoodPanel</code>”. Searching in the materials JSON file, there is only one occurrence of that string so I know that the material that this texture is associated to, has to be that one material I want ("<code>WoodPanelMat1_v</code>”) (<b>Fig. 5</b>). By fortune, the same could be applied to the other materials (<b>Fig. 6 and 7</b>), if not you would have to view the DAE file on "<code>Blender</code>" to get more information of your desired material.</p>
+<p>- Roof-like texture name "<code>Yane3D</code>”, material associated "<code>HouseTopMat_v</code>”.</p>
+<p>- Stone-like texture name "<code>TopCastleTile</code>”, material associated "<code>StoneWall2Mat_v</code>”.</p>
+
+<img src="../../images/t3/Fig 4a.png">
+
+<b><p class="idtext">(Fig. 4a - 2 of the 3 materials required for the tutorial's model)</p></b>
+
+<br>
+
+<img src="../../images/t3/Fig 4b.png">
+
+<b><p class="idtext">(Fig. 4b - Third material required by the tutorial's model)</p></b>
+
+<br>
+
+<img src="../../images/t3/Fig 5.png">
+
+<b><p class="idtext">(Fig. 5 - Searching texture in materials JSON method)</p></b>
+
+<br>
+
+<img src="../../images/t3/Fig 6.png">
+
+<b><p class="idtext">(Fig. 6)</p></b>
+
+<br>
+
+<img src="../../images/t3/Fig 7.png">
+
+<b><p class="idtext">(Fig. 7)</p></b>
+
+<br>
+
+<p>- Now, with the material names and PNG textures located, assign them to your object on "<code>Blender</code>" (<b>Fig. 8</b>). And export the model as an FBX and OBJ file.</p>
+
+<img src="../../images/t3/Fig 8.png">
+
+<b><p class="idtext">(Fig. 8 - "<code>Blender</code>" model with material's textures applied)</p></b>
+
+<br>
+
+<p>- Now your "<code>Blender</code>" exports in hand, create 2 TXT files, name them "<code>mymaterials</code>” and "<code>mytextures</code>” (for example) (<b>Fig. 9</b>). Change their file extensions to JSON both (<b>Fig. 10</b>). Copy all textures used from the textures JSON in the new "<code>mytextures.json</code>” and also copy all the materials used from the materials JSON to the new "<code>mymaterials.json</code>” in the following way:</p>
+
+<br>
+
+<b><p class="idtext">For materials (general structure):</p></b>
+
+<div class="longCode">
+<p>&ensp;[</p>
+<p>&ensp;&emsp;&emsp;{</p>
+	<p>&ensp;&emsp;&emsp;&emsp;&emsp;1st material data</p>
+<p>&ensp;&emsp;&emsp;},</p>
+<p>&ensp;&emsp;&emsp;{</p>
+	<p>&ensp;&emsp;&emsp;&emsp;&emsp;2nd material data</p>
+<p>&ensp;&emsp;&emsp;},</p>
+<br>
+<p>&ensp;&emsp;&emsp;…</p>
+<br>
+<p>&ensp;&emsp;&emsp;{</p>
+	<p>&ensp;&emsp;&emsp;&emsp;&emsp;N-esimal material data</p>
+<p>&ensp;&emsp;&emsp;}</p>
+<p>&ensp;]</p>
+</div>
+
+<br>
+
+<b><p class="idtext">For textures (general structure):</p></b>
+
+<div class="longCode">
+<p>&ensp;[</p>
+<p>&ensp;&emsp;&emsp;{</p>
+	<p>&ensp;&emsp;&emsp;&emsp;&emsp;1st texture data</p>
+<p>&ensp;&emsp;&emsp;},</p>
+<p>&ensp;&emsp;&emsp;{</p>
+	<p>&ensp;&emsp;&emsp;&emsp;&emsp;2nd texture data</p>
+<p>&ensp;&emsp;&emsp;},</p>
+<br>
+<p>&ensp;&emsp;&emsp;…</p>
+<br>
+<p>&ensp;&emsp;&emsp;{</p>
+	<p>&ensp;&emsp;&emsp;&emsp;&emsp;N-esimal texture data</p>
+<p>&ensp;&emsp;&emsp;}</p>
+<p>&ensp;]</p>
+</div>
+
+<br>
+
+<p><b>- Note 1:</b> material/texture data order does not matter (put them in the order you want conserving the above format).</p>
+
+<p><b>- Note 2:</b> when copying materials, they can be quite long, for this, if on Windows, "<code>Notepad++</code>” has a very handy feature, at the left part of the editor, there are like several "<code>-</code>” signs (<b>Fig. 11</b>). In the line before a material name that "<code>-</code>” sign will show up and if you click on it, the whole material section will collapse (<b>Fig. 12</b>). Now, copy the 2 lines that have the "<code>+</code>” and "<code>-</code>” signs at the left, and you will have copied the whole material data! with and extra "<code>{</code>”, don’t forget to erase it! In this way you can copy/paste the materials more easily.</p>
+
+<br>
+
+<img src="../../images/t3/Fig 9.png">
+
+<b><p class="idtext">(Fig. 9 - TXT file creation)</p></b>
+
+<br>
+
+<img src="../../images/t3/Fig 10.png">
+
+<b><p class="idtext">(Fig. 10 - Change file extension from TXT to JSON)</p></b>
+
+<br>
+
+<img src="../../images/t3/Fig 11.png">
+
+<b><p class="idtext">(Fig. 11 - "<code>-</code>” signs in Notepad++)</p></b>
+
+<br>
+
+<img src="../../images/t3/Fig 12.png">
+
+<b><p class="idtext">(Fig. 12 - Material data collapsed)</p></b>
+
+<br>
+
+<p>- After setting up both new JSON files, create a BMD file with "<code>SuperBMD</code>" with the following commad (using the newly created and saved JSON files).</p>
+<b><p>Formated code (for this tutorial):</p></b>
+<p><code>path\to\SuperBMD.exe object-name.fbx --mat mymaterials.json –texheader mytextures.json –rotate</code></p>
+
+<br>
+
+<p>- Open/Save the BMD file created from "<code>SuperBMD</code>” with "<code>j3dview</code>” as a BMD/BDL file, create the collision files of your object (KCL and PA files) and finish doing what you’ve learned from the previous tutorials to import the model on game.</p>
+
+<p>- Now Mario can rest properly with high quality materials (<b>Fig. 13</b>).</p>
+
+<img src="../../images/t3/Fig 13.jpg">
+
+<b><p class="idtext">(Fig. 13 - Mario chilling on his new couch made out of roof)</p></b>
+
+<br>
+
+<hr>
+
+<p>My "<code>tutorial3</code>" model, textures and JSON files: <a href="https://www.mediafire.com/folder/1bnepns4y4167/tutorial3">https://www.mediafire.com/folder/1bnepns4y4167/tutorial3</a></p>
+
+<hr>
+
+<h2><b>Guide in which this explanation was based:</b></h2>
+<p>By Luma48:</p>
+<p>- <a href="https://www.youtube.com/watch?v=cYg3ea2ihpY">https://www.youtube.com/watch?v=cYg3ea2ihpY</a></p>
+<p>- <a href="https://luma.aurumsmods.com/wiki/Model_Importing_Tutorial">https://luma.aurumsmods.com/wiki/Model_Importing_Tutorial</a></p>
+
+
+</div>
+
+</div>
+
+</body>
+
+</html>

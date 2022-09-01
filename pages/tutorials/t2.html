@@ -62,14 +62,14 @@
 
 <h2><b>Required tutorials:</b></h2>
 
-<p>How to import a custom model into SMG1 (strictly required).</p>
+<p><a href="t1.html">How to import a custom model into SMG1</a></p>
 
 <br>
 
 <hr>
 
 <h2><b>Warnings:</b></h2>
-<p>- I will be dealing with a SuperBMD bug that has not been corrected yet. I can bypass it by using j3dview (I will explain this on the tutorial).</p>
+<p>- I will be dealing with a "<code>SuperBMD</code>" bug that has not been corrected yet. I can bypass it by using "<code>j3dview</code>" (I will explain this on the tutorial).</p>
 <p>- This tutorial is only to import a model with 1 in-game material. The next tutorial will be for 2 and more. The reason I made this distinction is because I believe this is the fastest way to import a model with 1 in-game material only, when using 2 or more you have to be more organized.</p>
 
 <br>
@@ -78,15 +78,15 @@
 
 <h2><b>Steps:</b></h2>
 
-<p>- First we need to know the in-game material we want to extract. Open Whitehole and search around the galaxies for the object that has the material you want. I will choose the material this planet has as grass. It is located in Good Egg Galaxy (Fig. 1).</p>
+<p>- First we need to know the in-game material we want to extract. Open "<code>Whitehole</code>" and search around the galaxies for the object that has the material you want. I will choose the material this planet has as grass. It is located in "<code>Good Egg Galaxy</code>" (<b>Fig. 1</b>).</p>
 
 <img src="../../images/t2/Fig 1.png">
 
-<b><p class="idtext">(Fig. 1 - Whitehole search for model containing desired material)</p></b>
+<b><p class="idtext">(Fig. 1 - "<code>Whitehole</code>" search for model containing desired material)</p></b>
 
 <br>
 
-<p>- Click on the desired object and look for its "<code>Object</code>" property (you will need this value), in my case the "<code>Object</code>" is "<code>BroadBeanPlanetB</code>" (Fig. 2). You can now close Whitehole and go to the "<code>ObjectData</code>" folder of your SMG1 dump. In there you will look for an ARC file named exactly as the “Object” value you got from before, in my case that would be the "<code>BroadBeanPlanetB.arc</code>" file (Fig. 3). This is the file that contains the planet’s model seen before in Whitehole. Just to keep things organized create a folder named "<code>game-materials</code>" on your SMG working environment and place the ARC file inside a folder that has the same name as the ARC file (Fig. 4).</p>
+<p>- Click on the desired object and look for its "<code>Object</code>" property (you will need this value), in my case the "<code>Object</code>" is "<code>BroadBeanPlanetB</code>" (<b>Fig. 2</b>). You can now close "<code>Whitehole</code>" and go to the "<code>ObjectData</code>" folder of your SMG1 dump. In there you will look for an ARC file named exactly as the “Object” value you got from before, in my case that would be the "<code>BroadBeanPlanetB.arc</code>" file (<b>Fig. 3</b>). This is the file that contains the planet’s model seen before in "<code>Whitehole</code>". Just to keep things organized create a folder named "<code>game-materials</code>" on your SMG working environment and place the ARC file inside a folder that has the same name as the ARC file (<b>Fig. 4</b>).</p>
 
 <img src="../../images/t2/Fig 2.png">
 
@@ -106,7 +106,7 @@
 
 <br>
 
-<p>- Now create a new window "<code>Ctrl+N</code>" locate the Arc Convertor tool and drag and drop the ARC file extracted into to the "<code>arcExtract.exe</code>" file. A few new files will appear in the same location as the ARC file (depending on the object there will be more or less files) (Fig. 5).</p>
+<p>- Now create a new window "<code>Ctrl+N</code>" locate the "<code>Arc Convertor</code>" tool and drag and drop the ARC file extracted into to the "<code>arcExtract.exe</code>" file. A few new files will appear in the same location as the ARC file (depending on the object there will be more or less files) (<b>Fig. 5</b>).</p>
 
 <img src="../../images/t2/Fig 5.png">
 
@@ -114,7 +114,7 @@
 
 <br>
 
-<p>- Locate the BDL/BMD file (file containing the 3D model of the object) and in the other window search for the SuperBMD tool. Drag and drop the BDL file into the "<code>SuperBMD.exe</code>" file. Several more files should appear on the same location as the BDL/BMD file (Fig. 6).</p>
+<p>- Locate the BDL/BMD file (file containing the 3D model of the object) and in the other window search for the "<code>SuperBMD</code>" tool. Drag and drop the BDL file into the "<code>SuperBMD.exe</code>" file. Several more files should appear on the same location as the BDL/BMD file (<b>Fig. 6</b>).</p>
 
 <img src="../../images/t2/Fig 6.png">
 
@@ -122,11 +122,11 @@
 
 <br>
 
-<p>- The file we want to concentrate on first is the DAE file created by SuperBMD. This is the 3D model of the object containing our desired material in a file that can be processed by Blender. Open Blender and go to File > Import > Collada (Default) (.dae) (Fig. 7) and search for the DAE file from before. After selecting it, the model will show up on Blender. It will show very big so scale it down to a reasonable size (does not matter in which mode to scale it) (Fig. 8).</p>
+<p>- The file we want to concentrate on first is the DAE file created by "<code>SuperBMD</code>". This is the 3D model of the object containing our desired material in a file that can be processed by "<code>Blender</code>". Open "<code>Blender</code>" and go to "<code>File > Import > Collada (Default) (.dae)</code>" (<b>Fig. 7</b>) and search for the DAE file from before. After selecting it, the model will show up on "<code>Blender</code>". It will show very big so scale it down to a reasonable size (does not matter in which mode to scale it) (<b>Fig. 8</b>).</p>
 
 <img src="../../images/t2/Fig 7.png">
 
-<b><p class="idtext">(Fig. 7 - Import DAE file to Blender)</p></b>
+<b><p class="idtext">(Fig. 7 - Import DAE file to "<code>Blender</code>")</p></b>
 
 <br>
 
@@ -136,7 +136,7 @@
 
 <br>
 
-<p>- With the object file in Blender we can now see the materials that are assigned to this object. Go to the "<code>Materials tab</code>" and Right-Click on the face you know your material is present. In this case the object is simple and is only decomposed in 2 fragments (the cube and the planet) (In some cases the material we want won’t be exactly on the place we think it is so you have to search its texture associated to see if it is actually the material you want) (Fig. 9). And the material we want for our model is called "<code>m0BeanFace_v</code>" (Fig. 9). This was only to get the name of the material we wanted. You can now close Blender.</p>
+<p>- With the object file in "<code>Blender</code>" we can now see the materials that are assigned to this object. Go to the "<code>Materials tab</code>" and Right-Click on the face you know your material is present. In this case the object is simple and is only decomposed in 2 fragments (the cube and the planet) (In some cases the material we want won’t be exactly on the place we think it is so you have to search its texture associated to see if it is actually the material you want) (<b>Fig. 9</b>). And the material we want for our model is called "<code>m0BeanFace_v</code>" (<b>Fig. 9</b>). This was only to get the name of the material we wanted. You can now close "<code>Blender</code>".</p>
 
 <img src="../../images/t2/Fig 9.png">
 
@@ -144,7 +144,7 @@
 
 <br>
 
-<p>-  Now, go and open with your favorite text editor the "<code>&ltarcfilename&gt_materials.json</code>" file located in the same place as your DAE file is (I will use Notepad++ on Windows). This is the file containing the information of all the materials coded into the ARC file from before (the "<code>&ltarcfilename&gt_tex_headers.json</code>" file contains the information about the textures assigned to the materials from the "<code>&ltarcfilename&gt_materials.json</code>") (Fig. 10 and 11).</p>
+<p>-  Now, go and open with your favorite text editor the "<code>&ltarcfilename&gt_materials.json</code>" file located in the same place as your DAE file is (I will use "<code>Notepad++</code>" on Windows). This is the file containing the information of all the materials coded into the ARC file from before (the "<code>&ltarcfilename&gt_tex_headers.json</code>" file contains the information about the textures assigned to the materials from the "<code>&ltarcfilename&gt_materials.json</code>") (<b>Fig. 10 and 11</b>).</p>
 
 <img src="../../images/t2/Fig 10.png">
 
@@ -154,11 +154,11 @@
 
 <img src="../../images/t2/Fig 11.png">
 
-<b><p class="idtext">(Fig. 11 - Material JSON file opened on Notepad++)</p></b>
+<b><p class="idtext">(Fig. 11 - Material JSON file opened on "<code>Notepad++</code>")</p></b>
 
 <br>
 
-<p>- Remove the first 2 or 3 letters from the material’s name extracted from Blender (the actual material name is the one after those letters) and search for that name on the text editor (in my case it is named "<code>BeanFace_v</code>") (Fig. 12).</p>
+<p>- Remove the first 2 or 3 letters from the material’s name extracted from "<code>Blender</code>" (the actual material name is the one after those letters) and search for that name on the text editor (in my case it is named "<code>BeanFace_v</code>") (<b>Fig. 12</b>).</p>
 
 <img src="../../images/t2/Fig 12.png">
 
@@ -166,7 +166,7 @@
 
 <br>
 
-<p>- The "<code>Name</code>" property is the name of the material, and what exists in the "<code>TextureNames</code>" property are the textures used by that material (Fig. 13).</p>
+<p>- The "<code>Name</code>" property is the name of the material, and what exists in the "<code>TextureNames</code>" property are the textures used by that material (<b>Fig. 13</b>).</p>
 
 <img src="../../images/t2/Fig 13.png">
 
@@ -174,7 +174,7 @@
 
 <br>
 
-<p> - As we can see (Fig. 13) the textures used by this material are called "<code>Grasses001HighColorLoop02LightGray:0</code>", "<code>BeanHighLight:0</code>" and "<code>Grasses001HighColorLoop02LightGray:0</code>". By mentally removing the "<code>:0</code>" at the end of each entry you will find on the same directory the ARC file is, PNG files that carry those names, those are the textures (Fig. 14). You may have though, “a texture repeats twice?” yes, they can repeat several times and we will use that later.</p>
+<p> - As we can see (<b>Fig. 13</b>) the textures used by this material are called "<code>Grasses001HighColorLoop02LightGray:0</code>", "<code>BeanHighLight:0</code>" and "<code>Grasses001HighColorLoop02LightGray:0</code>". By mentally removing the "<code>:0</code>" at the end of each entry you will find on the same directory the ARC file is, PNG files that carry those names, those are the textures (<b>Fig. 14</b>). You may have though, “a texture repeats twice?” yes, they can repeat several times and we will use that later.</p>
 
 <img src="../../images/t2/Fig 14.png">
 
@@ -182,7 +182,7 @@
 
 <br>
 
-<p>- Now let’s go and open our model to apply those textures on (I will apply the material to an UV sphere) (Fig. 15). </p>
+<p>- Now let’s go and open our model to apply those textures on (I will apply the material to an UV sphere) (<b>Fig. 15</b>). </p>
 
 <img src="../../images/t2/Fig 15.png">
 
@@ -190,7 +190,7 @@
 
 <br>
 
-<p>- Set a material in Blender and assign it to the faces of the object you want. Change its name to the name of the material extracted from before (in my case it will be named "<code>BeanFace_v</code>") (Fig. 16).</p>
+<p>- Set a material in "<code>Blender</code>" and assign it to the faces of the object you want. Change its name to the name of the material extracted from before (in my case it will be named "<code>BeanFace_v</code>") (<b>Fig. 16</b>).</p>
 
 <img src="../../images/t2/Fig 16.png">
 
@@ -198,7 +198,7 @@
 
 <br>
 
-<p>- Now set the textures to that material keeping the order and the repetition of the texture list of the material in the material JSON file (you don’t need to apply specific names to the textures) (Fig. 17 and 13).</p>
+<p>- Now set the textures to that material keeping the order and the repetition of the texture list of the material in the material JSON file (you don’t need to apply specific names to the textures) (<b>Fig. 17 and 13</b>).</p>
 
 <img src="../../images/t2/Fig 17.png">
 
@@ -206,15 +206,15 @@
 
 <br>
 
-<p>- Unwrap or apply a Smart UV Project and modify the looks of your textures as you wish (apply vertex paint for example or smooth shading), triangulate, scale and export your model into FBX and OBJ to a known path (place your textures in the same place the exported files are) (all explained in last tutorial) and then locate your exports to continue with the tutorial (Fig. 18).</p>
+<p>- Unwrap or apply a Smart UV Project and modify the looks of your textures as you wish (apply vertex paint for example or smooth shading), triangulate, scale and export your model into FBX and OBJ to a known path (place your textures in the same place the exported files are) (all explained in last tutorial) and then locate your exports to continue with the tutorial (<b>Fig. 18</b>).</p>
 
 <img src="../../images/t2/Fig 18.png">
 
-<b><p class="idtext">(Fig. 18 - Exported files from Blender with the texture files used)</p></b>
+<b><p class="idtext">(Fig. 18 - Exported files from "<code>Blender</code>" with the texture files used)</p></b>
 
 <br>
 
-<p>- Copy both JSON files in the same place the exported files are (Fig. 19).</p>
+<p>- Copy both JSON files in the same place the exported files are (<b>Fig. 19</b>).</p>
 
 <img src="../../images/t2/Fig 19.png">
 
@@ -222,7 +222,7 @@
 
 <br>
 
-<p>- Remove the textures from the copied "<code>&ltarcfilename&gt_tex_headers.json</code>" file that you aren’t using (Fig. 20) and save the document (if you don’t do this SuperBMD will crash). And then open the CMD in that folder.</p>
+<p>- Remove the textures from the copied "<code>&ltarcfilename&gt_tex_headers.json</code>" file that you aren’t using (<b>Fig. 20</b>) and save the document (if you don’t do this "<code>SuperBMD</code>" will crash). And then open the CMD in that folder.</p>
 
 <img src="../../images/t2/Fig 20.png">
 
@@ -230,18 +230,18 @@
 
 <br>
 
-<p>- Locate the "<code>SuperBMD.exe</code>" file (in the SuperBMD tool folder) and drag and drop it to the CMD window, type a space, drag and drop the FBX model you want to introduce on the game, type another space, add "<code>--mat</code>", another space, drag and drop the "<code>&ltarcfilename&gt_materials.json</code>",  add another space, type "<code>--texheader</code>”, type another space, drag and drop the "<code>&ltarcfilename&gt_tex_headers.json</code>", type a space and then end with a "<code>--rotate</code>” (alternatively you can input everything manually) (Fig. 21). Then press enter.</p>
+<p>- Locate the "<code>SuperBMD.exe</code>" file (in the "<code>SuperBMD</code>" tool folder) and drag and drop it to the CMD window, type a space, drag and drop the FBX model you want to introduce on the game, type another space, add "<code>--mat</code>", another space, drag and drop the "<code>&ltarcfilename&gt_materials.json</code>",  add another space, type "<code>--texheader</code>”, type another space, drag and drop the "<code>&ltarcfilename&gt_tex_headers.json</code>", type a space and then end with a "<code>--rotate</code>” (alternatively you can input everything manually) (<b>Fig. 21</b>). Then press enter.</p>
 <p>Formated code example:</p>
 <code>path/to/SuperBMD.exe &ltyour_object&gt.fbx --mat &ltarcfilename&gt_materials.json --texheader &ltarcfilename&gt_tex_headers.json --rotate"</code>
-<p>What this does is to link the materials in game with the materials you added on your object (you had to name the material in Blender the same as the material from the in-game object to be able to make this link here).</p>
+<p>What this does is to link the materials in game with the materials you added on your object (you had to name the material in "<code>Blender</code>" the same as the material from the in-game object to be able to make this link here).</p>
 
 <img src="../../images/t2/Fig 21.png">
 
-<b><p class="idtext">(Fig. 21 - Using SuperBMD on CMD to apply materials to model)</p></b>
+<b><p class="idtext">(Fig. 21 - Using "<code>SuperBMD</code>" on CMD to apply materials to model)</p></b>
 
 <br>
 
-<p>- If everything was done correctly a BMD file will be created in the same directory the FBX file is (Fig. 22).</p>
+<p>- If everything was done correctly a BMD file will be created in the same directory the FBX file is (<b>Fig. 22</b>).</p>
 
 <img src="../../images/t2/Fig 22.png">
 
@@ -249,15 +249,15 @@
 
 <br>
 
-<p>- Go and open the BMD file with j3dview (open j3dview and go to File > Open Model… then search for your file) and save it as a BDL/BMD (does not matter in which format to save it) (File > Save Model As…) (Fig. 23). This is done because SuperBMD has a bug (mentioned at the beginning) that when an in-game material is applied to an object the material applied on the imported model will look extremely strong on game. When opening it and saving it with j3dview this error is corrected and the material will show as intended in game.</p>
+<p>- Go and open the BMD file with "<code>j3dview</code>" (open "<code>j3dview</code>" and go to "<code>File > Open Model…</code>" then search for your file) and save it as a BDL/BMD (does not matter in which format to save it) (File > Save Model As…) (<b>Fig. 23</b>). This is done because "<code>SuperBMD</code>" has a bug (mentioned at the beginning) that when an in-game material is applied to an object the material applied on the imported model will look extremely strong on game. When opening it and saving it with "<code>j3dview</code>" this error is corrected and the material will show as intended in game.</p>
 
 <img src="../../images/t2/Fig 23.png">
 
-<b><p class="idtext">(Fig. 23 - BMD file created opened and saved with j3dview)</p></b>
+<b><p class="idtext">(Fig. 23 - BMD file created opened and saved with "<code>j3dview</code>")</p></b>
 
 <br>
 
-<p>- That BDL/BMD file will be the one that you will put on a folder with the collision files of your model, pack it as an ARC file (apply yaz0enc to it and rename) and finally introduce the model on the game (explained on the previous tutorial) (Fig. 24). (with this material if scaled down the UV mapping on Blender the model looks better).</p>
+<p>- That BDL/BMD file will be the one that you will put on a folder with the collision files of your model, pack it as an ARC file (apply "<code>yaz0enc</code>" to it and rename) and finally introduce the model on the game (explained on the previous tutorial) (<b>Fig. 24</b>). (with this material if scaled down the UV mapping on "<code>Blender</code>" the model looks better).</p>
 
 <img src="../../images/t2/Fig 24.jpg">
 
@@ -267,16 +267,14 @@
 
 <hr>
 
-<p>My "<code>tutorial2</code>" model, texture files and JSON files --> <a href="https://www.mediafire.com/folder/a1sbahckbr0og/tutorial2">https://www.mediafire.com/folder/a1sbahckbr0og/tutorial2</a></p>
+<p>My "<code>tutorial2</code>" model, textures and JSON files --> <a href="https://www.mediafire.com/folder/a1sbahckbr0og/tutorial2">https://www.mediafire.com/folder/a1sbahckbr0og/tutorial2</a></p>
 
 <hr>
 
 <h2><b>Some extra explanations:</b></h2>
-<p>- The materials might not work exactly as intended because as they were created for the model from which they have been extracted, only models similar to the original one will fit the material correctly. With some modifications to the model on Blender you can get the material to look better (you have to learn a little more how to used Blender).</p>
+<p>- The materials might not work exactly as intended because as they were created for the model from which they have been extracted, only models similar to the original one will fit the material correctly. With some modifications to the model on "<code>Blender</code>" you can get the material to look better (you have to learn a little more how to used "<code>Blender</code>").</p>
 <p>- As we are using only one material I did not explain properly the JSON setup file. This tutorial is more intended to be a preparation to the next being with 2 or more in game materials.</p>
-<p>- I wasn’t aware of the SuperBMD error, it wasn’t documented on any website I’ve found about SMG modding, so I had to ask on the Luma’s Workshop Discord server; thanks to a kind user, I was able to finish this tutorial correctly (many thanks). Hopefully this error will be fixed soon.</p>
-
-
+<p>- I wasn’t aware of the "<code>SuperBMD</code>" error, it wasn’t documented on any website I’ve found about SMG modding, so I had to ask on the Luma’s Workshop Discord server; thanks to a kind user, I was able to finish this tutorial correctly (many thanks). Hopefully this error will be fixed soon.</p>
 </div>
 
 </div>
