@@ -1,5 +1,8 @@
+html, body {overflow-x: hidden;}
+
 body {
 
+word-wrap: break-word;
 line-height: 24px;
 background-color: #191919;
 font-family: Arial;
@@ -10,43 +13,54 @@ margin: 0px;}
 
 width: 100%;
 background-size:100% 100%;
-height: 620px;
+aspect-ratio: 9/3;
 background-image: url('images/background.png');
 }
 
 .title {
 
-transform: translate(300px, 300px);
+font-size: calc(1.5vw);
+line-height: calc(3vw);
+width: 40%;
+position: absolute;
+top: calc(9vw);
+left: 10%;
 color: white;
 }
 
 .main {
 
+border: 22px solid transparent;
 margin: auto;
-margin-top: 42px;
-width: 80%;
+max-width: 60em;
 font-size: 18px;}
 
 .left {
 
 background-color: #cdcdcd;
-padding: 15px;
-border: gray 6px dashed;
-float: left;
-width: 75%;
-margin-bottom: 90px;}
+border: #007dff 6px dashed;
+max-width: 82%;
+margin-bottom: 90px;
+box-shadow: -5px 5px 10px #555;
+border-radius: 5px;}
 
 .right {
 
+text-align: center;
+margin-top: 25px;
+margin-left: 15px;
 background-color: #cdcdcd;
-padding: 15px;
-border: gray 6px dashed;
+border: #007dff 6px dashed;
 float: right;
-width: 15%;}
+width: 140px;
+box-shadow: -5px 5px 10px #555;
+border-radius: 5px;}
 
-img {
+p, h1, h2, h3, img {
 
-width: 100%;}
+margin-left: 3%;
+width: 94%;
+}
 
 .idtext {
 
