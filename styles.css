@@ -3,7 +3,7 @@ html, body {overflow-x: hidden;}
 body {
 
 word-wrap: break-word;
-line-height: 24px;
+line-height: calc(1.5vw);
 background-color: #191919;
 font-family: Arial;
 width: 100%;
@@ -19,7 +19,7 @@ background-image: url('images/background.png');
 
 .title {
 
-font-size: calc(1.5vw);
+font-size: calc(1.6vw);
 line-height: calc(3vw);
 width: 40%;
 position: absolute;
@@ -30,31 +30,32 @@ color: white;
 
 .main {
 
-border: 22px solid transparent;
-margin: auto;
+border: calc(2vw) solid transparent;
+margin-left: calc(15vw);
 max-width: 60em;
-font-size: 18px;}
+font-size: calc(1.2vw);}
+
+.left, .right {
+
+background-color: #cdcdcd;
+border: #007dff calc(0.4vw) dashed;
+box-shadow: calc(-0.3vw) calc(0.3vw) calc(0.6vw) #555;
+border-radius: calc(0.3vw);
+}
 
 .left {
 
-background-color: #cdcdcd;
-border: #007dff 6px dashed;
 max-width: 82%;
 margin-bottom: 90px;
-box-shadow: -5px 5px 10px #555;
-border-radius: 5px;}
+}
 
 .right {
 
 text-align: center;
-margin-top: 25px;
-margin-left: 15px;
-background-color: #cdcdcd;
-border: #007dff 6px dashed;
+margin-top: calc(1.2vw);
 float: right;
-width: 140px;
-box-shadow: -5px 5px 10px #555;
-border-radius: 5px;}
+width: calc(9vw);
+}
 
 p, h1, h2, h3, img {
 
@@ -76,8 +77,8 @@ padding: 1px;}
 
 background-color: white;
 padding: 1px;
-line-height: 8px;
+line-height: calc(0.6vw);
 width: 50%;
 margin-left: 25%;
 border-radius: 3px;
-border: 3px solid black;}
+border: calc(0.3vw) solid black;}
