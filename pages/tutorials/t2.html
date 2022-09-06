@@ -251,15 +251,15 @@
 
 <br>
 
-<p>- Go and open the BMD file with "<code>j3dview</code>" (open "<code>j3dview</code>" and go to "<code>File > Open Model…</code>" then search for your file) and save it as a BDL/BMD (does not matter in which format to save it) (File > Save Model As…) (<b>Fig. 23</b>). This is done because "<code>SuperBMD</code>" has a bug (mentioned at the beginning) that when an in-game material is applied to an object the material applied on the imported model will look extremely strong on game. When opening it and saving it with "<code>j3dview</code>" this error is corrected and the material will show as intended in game.</p>
+<p>- Go and open the BMD file with "<code>j3dview</code>" (open "<code>j3dview</code>" and go to "<code>File > Open Model…</code>" then search for your file) and save it as a BDL (File > Save Model As…) (<b>Fig. 23</b>). This is done because "<code>SuperBMD</code>" has a bug (mentioned at the beginning) that when an in-game material is applied to an object the material applied on the imported model will look extremely strong on game. When opening it and saving it with "<code>j3dview</code>" this error is corrected and the material will show as intended in game.</p>
 
 <img src="../../images/t2/Fig 23.png">
 
-<b><p class="idtext">(Fig. 23 - BMD file created opened and saved with "<code>j3dview</code>")</p></b>
+<b><p class="idtext">(Fig. 23 - BMD file created opened and saved as BDL with "<code>j3dview</code>")</p></b>
 
 <br>
 
-<p>- That BDL/BMD file will be the one that you will put on a folder with the collision files of your model, pack it as an ARC file (apply "<code>yaz0enc</code>" to it and rename) and finally introduce the model on the game (explained on the previous tutorial) (<b>Fig. 24</b>). (with this material if scaled down the UV mapping on "<code>Blender</code>" the model looks better).</p>
+<p>- That BDL file will be the one that you will put on a folder with the collision files of your model, pack it as an ARC file (apply "<code>yaz0enc</code>" to it and rename) and finally introduce the model on the game (explained on the previous tutorial) (<b>Fig. 24</b>). (with this material if scaled down the UV mapping on "<code>Blender</code>" the model looks better).</p>
 
 <img src="../../images/t2/Fig 24.jpg">
 
@@ -277,6 +277,7 @@
 <p>- The materials might not work exactly as intended because as they were created for the model from which they have been extracted, only models similar to the original one will fit the material correctly. With some modifications to the model on "<code>Blender</code>" you can get the material to look better (you have to learn a little more how to used "<code>Blender</code>").</p>
 <p>- As we are using only one material I did not explain properly the JSON setup file. This tutorial is more intended to be a preparation to the next being with 2 or more in game materials.</p>
 <p>- I wasn’t aware of the "<code>SuperBMD</code>" error, it wasn’t documented on any website I’ve found about SMG modding, so I had to ask on the Luma’s Workshop Discord server; thanks to a kind user, I was able to finish this tutorial correctly (many thanks). Hopefully this error will be fixed soon.</p>
+<p>- It is best practice to save the model in j3dview as a BDL since as a BMD it might not look correct on the game all times.</p>
 </div>
 
 </div>
