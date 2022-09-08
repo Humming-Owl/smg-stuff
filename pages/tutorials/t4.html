@@ -1,0 +1,162 @@
+<html>
+
+<head>
+
+<meta name= "viewport" content= "width=device-width" http-equiv="Content-Type"/>
+
+<title>Custom model with an animated in-game material</title>
+
+<link rel="icon" type="image/png" href="../../images/icon.png" />
+
+<link rel="stylesheet" href="../../styles.css" type="text/css">
+
+</head>
+
+<body>
+
+<div class="start">
+
+<div class="title">
+
+<h1>Custom model with an animated in-game material</h1> 
+
+</div>
+
+</div>
+
+<div class="main">
+
+<div class="right">
+
+<h3><b>Contents</b></h3>
+
+<hr>
+
+<p>1. <a href="../../index.html">Introduction</a></p>
+
+<p>2. <a href="../tutorials.html">Tutorials</a></p>
+
+<p>3. <a href="../tools.html">Tools</a></p>
+
+<p>4. <a href="../other_links.html">Other links</a></p>
+
+</div>
+
+<div class="left">
+
+<h2><b>Tools needed</b></h2>
+<p>Refer to the "Tools" section for download.</p>
+
+<hr>
+
+<p>- Blender</p>
+<p>- SuperBMD</p>
+<p>- j3dview</p>
+<p>- Any text editor you like (Notepad++ is recommended)</p>
+<p>- Collision Creator</p>
+<p>- Arc Convertor</p>
+<p>- Whitehole</p>
+<p>- Wiimm's ISO Tools (to get your SMG1 dump)</p>
+
+<br>
+
+<hr>
+
+<h2><b>Required tutorials:</b></h2>
+
+<p>- <a href="t1.html">How to import a custom model into SMG1</a></p>
+<p>- <a href="t2.html">How to import a custom model into SMG1 with 1 in-game material</a></p>
+<p>- <a href="t3.html">How to import a custom model into SMG1 with 2 or more in-game materials</a></p>
+
+<br>
+
+<hr>
+
+<h2><b>Steps:</b></h2>
+
+<p>- First, locate the in game model containing the animated material you want, I will choose the lava material this object has ("<code>IceLavaIslandLavaMovableStepA</code>" located in "<code>IceVolcanoGalaxy</code>") (<b>Fig. 1</b>).</p>
+
+<img src="../../images/t4/Fig 1.png">
+
+<b><p class="idtext">(Fig. 1 - Model containing the animated lava I want)</p></b>
+
+<br>
+
+<p>- Do the same mentioned in the previous tutorials to get the material’s name (through the DAE file exported by "<code>SuperBMD</code>" and opened in "<code>Blender</code>" or by guessing the material by its associated textures from the JSON files exported by "<code>SuperBMD</code>"). In this case it is rapidly done by guessing the material from its texture associated from the material JSON file, since the lava texture is very notable (this material comes with 2 textures) (<b>Fig. 2</b>).</p>
+
+<img src="../../images/t4/Fig 2.png">
+
+<b><p class="idtext">(Fig. 2 - Material name search method with recognizable texture)</p></b>
+
+<br>
+
+<p>- Assign a material with the same name as the wanted material to the desired model on "<code>Blender</code>" and set up the special effects the model will have so that the texture looks nice (<b>Fig. 3</b>).</p>
+
+<img src="../../images/t4/Fig 3.png">
+
+<b><p class="idtext">(Fig. 3 - Custom model with respective textures applied)</p></b>
+
+<br>
+
+<p><b>Note</b>: in the contextual menu containing the unwrap options there are other options that might also be helpful when applying a texture to an object, every one of them unwraps in a different way (experiment with them, you will need them in the future!). I used the "<code>Sphere Projection</code>" unwrap method to get a better and rapid result for this object.</p>
+
+<br>
+
+<p>- Export your object as a FBX and OBJ files to a known location and then put in the same location the textures used and both JSON files from the original model (<b>Fig. 4</b>). As this object only requires a single material we can skip doing the new JSON files from the previous tutorial (<b>Import a model with 2 or more in-game materials</b>) and use the ones from the in game model by removing the unused textures from the textures JSON file so that "<code>SuperBMD</code>" does not crash (<b>Fig. 5</b>).</p>
+
+<img src="../../images/t4/Fig 4.png">
+
+<b><p class="idtext">(Fig. 4 - Needed files in the same location)</p></b>
+
+<br>
+
+<img src="../../images/t4/Fig 5.png">
+
+<b><p class="idtext">(Fig. 5 - Unused texture removal from the texture JSON)</p></b>
+
+<br>
+
+<p>-  Create a BMD file using "<code>SuperBMD</code>" (with the command provided in the previous tutorial) and the KCL and PA files with the "<code>Collision Creator</code>" ("<code>NeoKCLCreate</code>") (I choose "<code>Lava</code>" for the floor code :p). Open and save the BMD file created from "<code>SuperBMD</code>" as a BDL file with "<code>j3dview</code>" (to bypass the "<code>SuperBMD</code>" error) and then put the BDL, KCL and PA files into a common folder named exactly as them (<b>Fig. 6</b>).</p>
+
+<img src="../../images/t4/Fig 6.png">
+
+<b><p class="idtext">(Fig. 6 - BDL, KCL and PA files location)</p></b>
+
+<br>
+
+<p>- Now, with that being done it is time to put the animation file inside that same folder. BTK files are texture animation files (<a href="https://luma.aurumsmods.com/wiki/Category:File_formats">File formats</a>). When extracting the contents of the BDL file of the original model containing your animated material, a BTK file will be extracted, copy that file into the folder of your imported model and rename it as your model (<b>Fig. 7a and 7b</b>). This is basically the only thing to do to import a material animation to your model (being honest, thank god it is).</p>
+
+<img src="../../images/t4/Fig 7a.png">
+
+<b><p class="idtext">(Fig. 7a - In-game model BTK file)</p></b>
+
+<br>
+
+<img src="../../images/t4/Fig 7b.png">
+
+<b><p class="idtext">(Fig. 7b - Same BTK file renamed to the imported model name)</p></b>
+
+<br>
+
+<p>- At this point you know what to do: Generate an ARC file with the mentioned folder, "<code>yaz0enc</code>" it, rename the output file to ARC only, copy that ARC file to the "<code>ObjectData</code>" folder of your SMG1 dump, open "<code>Whitehole</code>", open the "<code>PlanetMapDataTable</code>" with <code>Whitehole</code>’s  "<code>BCSV editor</code>" and add your imported model to a new row, save, open a galaxy of your choice, place any object on the galaxy, change its "<code>Object</code>" property to your imported model name, and, if everything went correctly, you object will appear in "<code>Whitehole</code>". Next is to test on game! (<b>Fig. 8</b>)</p>
+
+<img src="../../images/t4/Fig 8.jpg">
+
+<b><p class="idtext">(Fig. 8 - Mario chilling VERY CLOSE to a body of HOT lava)</p></b>
+
+<br>
+
+<p><b>Note</b>: you cannot see the lava animation in <b>Fig. 8</b> but it was applied correctly.</p>
+
+
+<hr>
+
+<p>My "<code>tutorial4</code>" model, textures, BTK and JSON files: <a href="https://www.mediafire.com/folder/m1lf9p1t2ukjk/tutorial4">https://www.mediafire.com/folder/m1lf9p1t2ukjk/tutorial4</a></p>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
