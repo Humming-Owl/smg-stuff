@@ -81,7 +81,6 @@
 <p>- Set your model in "<code>Blender</code>" to have NO ANGLES against any axis if your model on "<code>Blender</code>" has an angle with an axis, the collision and the 3d model will be rotated that angle in game!</p>
 <p>- If your model appears white in "<code>Game/Whitehole</code>" you forgot to apply the materials or "<code>SuperBMD</code>" did not assign the textures to the model (maybe you moved the textures to another place and "<code>SuperBMD</code>" could not locate them).</p>
 <p>- If your model appears as a blue box then you missed something in the steps or did something else wrong (the error could be anywhere with this one).</p>
-<p>- <b>IMPORTANT</b>: it is best practice to open the BMD file created by SuperBMD with j3dview and save it as a BDL file, and use that file as the one you put inside the folder that will be transformed into the ARC file that is imported into the game (instead of the BMD file) (the reason behind this is explained in the next tutorial).</p>
 
 <br>
 
@@ -259,7 +258,7 @@
 
 <p>-  Now you can close "<code>Blender</code>" (save your project files in case you commit an error you can get back and fix it) and we are going to enter the file conversion part of the tutorial to be able to get a file of the model we’ve got that can be introduced in the game.</p>
 
-<p>- We will be using 3 programs of the 5 mentioned at the beginning of the tutorial: "<code>SuperBMD</code>", "<code>Collision Creator</code>" and Arc Covertor. Be sure to have them in respective folders to use them (<b>Fig. 22</b>).</p>
+<p>- We will be using 3 programs of the 5 mentioned at the beginning of the tutorial: "<code>SuperBMD</code>", "<code>Collision Creator</code>" and "<code>Arc Covertor</code>". Be sure to have them in respective folders to use them (<b>Fig. 22</b>).</p>
 
 <img src="../../images/t1/Fig 22.png">
 
@@ -275,39 +274,59 @@
 
 <br>
 
-<p>- Open a New window and in that window locate the "<code>SuperBMD</code>" tool (<b>Fig. 24</b>) (keep the window of your needed files open). Drag and drop the FBX file into the “<code>superbmd_rotate.bat</code>”. A BMD file will appear in the same folder as the FBX file (this is a file that contains your model) (<b>Fig. 25</b>).</p>
+<p>- Open a New window and in that window locate the "<code>SuperBMD</code>" tool (<b>Fig. 24a</b>) (keep the window of your needed files open). Drag and drop the FBX file into the “<code>superbmd_rotate.bat</code>”. A BMD file will appear in the same folder as the FBX file (this is a file that contains your model) (<b>Fig. 24b</b>).</p>
 
-<img src="../../images/t1/Fig 24.png">
+<img src="../../images/t1/Fig 24a.png">
 
-<b><p class="idtext">(Fig. 24 - "<code>SuperBMD</code>" tool folder)</p></b>
-
-<br>
-
-<img src="../../images/t1/Fig 25.png">
-
-<b><p class="idtext">(Fig. 25 - BMD file creation)</p></b>
+<b><p class="idtext">(Fig. 24a - "<code>SuperBMD</code>" tool folder)</p></b>
 
 <br>
 
-<p>- Locate the "<code>Collision Creator</code>" tool and drag and drop the OBJ file into the “<code>collision_creator.exe</code>”. A terminal and a window will appear (<b>Fig. 26</b>).</p>
+<img src="../../images/t1/Fig 24b.png">
 
-<img src="../../images/t1/Fig 26.png">
+<b><p class="idtext">(Fig. 24b - BMD file creation)</p></b>
 
-<b><p class="idtext">(Fig. 26 - "<code>Collision Creator</code>" tool)</p></b>
+<br>
+
+<p>Open the BMD file created with "<code>j3dview</code>" ("<code>File > Open Model...</code>") (<b>Fig. 25a</b>) and save it as a BDL file in the same location the BMD file is ("<code>File > Save Model As...</code>") (<b>Fig. 25b</b>). This is done to correct material lightning display issues in game that "<code>SuperBMD</code>" does not cover yet (<b>very important step in the next tutorials!</b>).</p>
+
+<img src="../../images/t1/Fig 25a.png">
+
+<b><p class="idtext">(Fig. 25a - BMD file opened in "<code>j3dview</code>")</p></b>
+
+<br>
+
+<img src="../../images/t1/Fig 25b.png">
+
+<b><p class="idtext">(Fig. 25b - Saving BMD file as BDL from "<code>j3dview</code>")</p></b>
+
+<br>
+
+<p>- Locate the "<code>Collision Creator</code>" tool ("<code>NeoKCLCreate</code>"), open it, go to "<code>File > New</code>" and go and select the OBJ file of your custom model (<b>Fig. 26a and 26b</b>).</p>
+
+<img src="../../images/t1/Fig 26a.png">
+
+<b><p class="idtext">(Fig. 26a - "<code>Collision Creator</code>" tool opened - "<code>NeoKCLCreate</code>")</p></b>
+
+<br>
+
+<img src="../../images/t1/Fig 26b.png">
+
+<b><p class="idtext">(Fig. 26b - OBJ file opened in "<code>NeoKCLCreate</code>")</p></b>
 
 <br>
 
 <p>- Set the “<code>Sound Code</code>”, “<code>Floor Code</code>” and “<code>Wall Code</code>” to the values you want for each material:</p>
 
-<p><b>1)</b> Sound Code: the sound that the material emits when Mario steps on it.</p>
+<p><b>1)</b> “<code>Sound Code</code>”: the sound that the material emits when Mario steps on it.</p>
 
-<p><b>2)</b> Floor Code: the properties the floor has that affects Mario when stepping into the material.</p>
+<p><b>2)</b> “<code>Floor Code</code>”: the properties the floor has that affects Mario when stepping into the material.</p>
 
-<p><b>3)</b> Wall Code: the property the wall has that affects Mario when wall grabbing to the material.</p>
+<p><b>3)</b> “<code>Wall Code</code>”: the property the wall has that affects Mario when wall grabbing to the material.</p>
 
 <p>I don’t know about the other options yet so I won’t explain them.</p>
 
-<p>- I will only modify the “<code>Sound Code</code>” of each material since this is not a very complicated object. I will set the “<code>Metal</code>” value to the “<code>metal1</code>” material (<b>Fig. 27a</b>), “<code>Wood Thin</code>” to the “<code>wood1</code>” material (<b>Fig. 27b</b>), “<code>Carpet</code>” to the “<code>cloth1</code>” material (<b>Fig. 27c</b>) and “<code>Cloud</code>” to the “<code>light1</code>” material (didn’t knew what to assign to a light as sound to be honest) (<b>Fig. 27d</b>).</p>
+<p>- I will only modify the “<code>Sound Code</code>” of each material since this is not a very complicated object. I will set the “<code>Metal</code>” value to the “<code>metal1</code>” material (<b>Fig. 27a</b>), “<code>Wood</code>” to the “<code>wood1</code>” material (<b>Fig. 27b</b>), “<code>Carpet</code>” to the “<code>cloth1</code>” material (<b>Fig. 27c</b>) and “<code>Cloud</code>” to the “<code>light1</code>” material (didn’t knew what to assign to a light as sound to be honest) (<b>Fig. 27d</b>).</p>
 
 <img src="../../images/t1/Fig 27a.png">
 
@@ -341,7 +360,7 @@
 
 <br>
 
-<p>- Create a folder named exactly as your model without the file extension (in my case it will be named “<code>tutorial1</code>”) and place the BMD, KCL and PA files inside of it (<b>Fig. 29a and 29b</b>).</p>
+<p>- Create a folder named exactly as your model without the file extension (in my case it will be named “<code>tutorial1</code>”) and place the BDL, KCL and PA files inside of it (<b>Fig. 29a and 29b</b>).</p>
 
 <img src="../../images/t1/Fig 29a.png">
 
@@ -351,7 +370,7 @@
 
 <img src="../../images/t1/Fig 29b.png">
 
-<b><p class="idtext">(Fig. 29b - BMD, KCL and PA files inside folder)</p></b>
+<b><p class="idtext">(Fig. 29b - BDL, KCL and PA files inside folder)</p></b>
 
 <br>
 
@@ -423,18 +442,7 @@
 
 <hr>
 
-<p>My “<code>tutorial1</code>" model and textures file --> <a href="https://www.mediafire.com/folder/p0ggix2rpoq2a/tutorial1">https://www.mediafire.com/folder/p0ggix2rpoq2a/tutorial1</a></p>
-
-<hr>
-
-<h2><b>Extra stuff:</b></h2>
-
-<p>I’ve made a little BATCH script to simplify the process with "<code>SuperBMD</code>", "<code>Collision Creator</code>" and the "<code>Arc Convertor</code>" tools. However it will only work with the folder distribution I have on the ZIP file I shared otherwise you will have to edit the script. The demonstration is at the end of my Youtube video.</p>
-
-<p>ZIP file mentioned and original video --> <a href="https://www.mediafire.com/folder/2l6706ajky6t4/SMG_Stuff">https://www.mediafire.com/folder/2l6706ajky6t4/SMG_Stuff</a></p>
-<p>Youtube video --> <a href="https://www.youtube.com/watch?v=kNod9yI1IOo&t">https://www.youtube.com/watch?v=kNod9yI1IOo&t</a></p>
-
-<br>
+<p>My “<code>tutorial1</code>" model and texture files --> <a href="https://www.mediafire.com/folder/p0ggix2rpoq2a/tutorial1">https://www.mediafire.com/folder/p0ggix2rpoq2a/tutorial1</a></p>
 
 <hr>
 
