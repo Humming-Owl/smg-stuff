@@ -1,6 +1,6 @@
 # Changelog
 
-- Added 4th tutorial (custom model with an animated in-game material).
+- Added 5th tutorial (Let's make some ice!).
 
 # smg-stuff
 https://humming-owl.github.io/smg-stuff/ 
