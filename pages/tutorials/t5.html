@@ -1,0 +1,199 @@
+<html>
+
+<head>
+
+<meta name= "viewport" content= "width=device-width" http-equiv="Content-Type"/>
+
+<title>Let's make some ice!</title>
+
+<link rel="icon" type="image/png" href="../../images/icon.png" />
+
+<link rel="stylesheet" href="../../styles.css" type="text/css">
+
+</head>
+
+<body>
+
+<div class="start">
+
+<div class="title">
+
+<h1>Let's make some ice!</h1> 
+
+</div>
+
+</div>
+
+<div class="main">
+
+<div class="right">
+
+<h3><b>Contents</b></h3>
+
+<hr>
+
+<p>1. <a href="../../index.html">Introduction</a></p>
+
+<p>2. <a href="../tutorials.html">Tutorials</a></p>
+
+<p>3. <a href="../tools.html">Tools</a></p>
+
+<p>4. <a href="../other_links.html">Other links</a></p>
+
+</div>
+
+<div class="left">
+
+<h2><b>Tools needed</b></h2>
+<p>Refer to the "Tools" section for download.</p>
+
+<hr>
+
+<p>- Blender</p>
+<p>- SuperBMD</p>
+<p>- j3dview</p>
+<p>- Any text editor you like (Notepad++ is recommended)</p>
+<p>- NeoKCLCreate</p>
+<p>- Arc Convertor</p>
+<p>- Whitehole</p>
+<p>- Wiimm's ISO Tools (to get your SMG1 dump)</p>
+
+<br>
+
+<hr>
+
+<h2><b>Required tutorials:</b></h2>
+
+<p>- <a href="t1.html">How to import a custom model into SMG1</a></p>
+<p>- <a href="t2.html">How to import a custom model into SMG1 with 1 in-game material</a></p>
+<p>- <a href="t3.html">How to import a custom model into SMG1 with 2 or more in-game materials</a></p>
+
+<br>
+
+<hr>
+
+<h2><b>Steps:</b></h2>
+
+<p>- In this tutorial I will show you how to make a custom model that works with several in-game materials that when combined generate a certain overall effect, a nice looking "<code>ice</code>" effect. The object containing that "<code>ice</code>" visual effect, which will be used as a reference for our custom model, is found in SMG1.  It is the "<code>IceRingIcePlanet</code>" object from the “<code>IceVolcanoGalaxy</code>” (<b>Fig. 1</b>).</p>
+
+<img src="../../images/t5/Fig 1.png">
+
+<b><p class="idtext">(Fig. 1 - "<code>IceRingIcePlanet</code>" game object)</p></b>
+
+<br>
+
+<p>- Extract the contents of the ARC file of the "<code>IceRingIcePlanet</code>", and extract the contents of the BDL file. Then, open with “<code>Blender</code>" the DAE file created by “<code>SuperBMD</code>” (<b>Fig. 2</b>). As you can see, this object is divided in 3 pieces, one inside another and there is a single material applied to each piece (<b>Fig. 3a, 3b and 3c</b>).</p>
+
+<img src="../../images/t5/Fig 2.png">
+
+<b><p class="idtext">(Fig. 2 - Figures composing the "<code>IceRingIcePlanet</code>" object)</p></b>
+
+<br>
+
+<img src="../../images/t5/Fig 3a.png">
+
+<b><p class="idtext">(Fig. 3a)</p></b>
+
+<br>
+
+<img src="../../images/t5/Fig 3b.png">
+
+<b><p class="idtext">(Fig. 3b)</p></b>
+
+<br>
+
+<img src="../../images/t5/Fig 3c.png">
+
+<b><p class="idtext">(Fig. 3c)</p></b>
+
+<br>
+
+<p>- It is the combination of these 3 figures with these 3 materials that makes it so this object looks like it is made of ice, so, the custom model we want to make containing this “<code>ice</code>” effect must be modeled in a way that imitates the looks of this object. Our “<code>ice</code>” model must be divided in 3 pieces: an external figure, an intermediate figure and a figure that is contained in both figures (<b>Fig. 4</b>). </p>
+
+<img src="../../images/t5/Fig 4.png">
+
+<b><p class="idtext">(Fig. 4 - Example figure)</p></b>
+
+<br>
+
+<p>- I decided to make a stalactite-type model in “<code>Blender</code>" (<b>Fig. 5</b>); the external and intermediate objects were shaped almost the same on the “<code>IceRingIcePlanet</code>" model so I made those on my model the same, I just scaled them a little bit to put one inside another (the were made out of a cube --> <a href="https://www.youtube.com/watch?v=NvzOErzvcqM">Link</a>). And the object inside both figures was made by using “<code>Particle Effects</code>" (<a href="https://www.youtube.com/watch?v=1gM8yEMFMjg">Link</a>) using planes (as the particles) and the “<code>Boolean Modifier</code>" on another “<code>Blender</code>" project so no dumb stuff happens on the main one (<a href="https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/booleans.html">Link</a>).</p>
+
+<img src="../../images/t5/Fig 5.png">
+
+<b><p class="idtext">(Fig. 5 - Stalactite-type custom model)</p></b>
+
+<br>
+
+<p>- Apply the respective materials to each figure “<code>BackFaceMat</code>” for the external figure, “<code>FaceMat</code>” for the intermediate figure and “<code>CrackMat_v</code>” to the figure inside both figures (<b>Fig. 6a, 6b and 6c</b>). Remember to do the unwrap options you need and apply vertex paint and/or shade smooth where you consider adequate.</p>
+
+<img src="../../images/t5/Fig 6a.png">
+
+<b><p class="idtext">(Fig. 6a)</p></b>
+
+<br>
+
+<img src="../../images/t5/Fig 6b.png">
+
+<b><p class="idtext">(Fig. 6b)</p></b>
+
+<br>
+
+<img src="../../images/t5/Fig 6c.png">
+
+<b><p class="idtext">(Fig. 6c)</p></b>
+
+<br>
+
+<p>- As we are dealing with materials inside materials we have to be careful with the normals of the faces, in other words, in which direction faces point in each figure: to the outside or the inside of the figure. This is because the visual effect on a material depends on the face direction. To view the normals of a figure hit the “<code>N</code>” key while being in “<code>Edit Mode</code>” selecting all faces on a figure, scroll down to “<code>Mesh Display</code>” and in the “<code>Normals</code>” section click on the face selection and set a size to the normals displayed (<b>Fig. 7</b>). To flip the orientation of the normals go to “<code>Shading / UV > Normals: > Flip Direction</code>” (be sure to select the whole figure in “<code>Edit Mode</code>” when doing this) (<b>Fig. 8</b>). By default, when you create a figure in “<code>Blender</code>”, the normals will be set to the outside of the figure.</p>
+
+<img src="../../images/t5/Fig 7.png">
+
+<b><p class="idtext">(Fig. 7 - Display normals in faces)</p></b>
+
+<br>
+
+<img src="../../images/t5/Fig 8.png">
+
+<b><p class="idtext">(Fig. 8 - Flip faces normals)</p></b>
+
+<br>
+
+<p>- For this “<code>ice</code>” effect setup we will set the faces of the intermediate figure inwards (<b>Fig. 9</b>). The others will keep their default (outside) face orientation. The figure inside of both figures does not matter to which direction the faces are oriented since it is a bunch of random placed faces to fill a volume.</p>
+
+<img src="../../images/t5/Fig 9.png">
+
+<b><p class="idtext">(Fig. 9 - Normals in intermediate figure pointing inwards)</p></b>
+
+<br>
+
+<p>- The final step will be ordering the objects on “<code>Blender</code>” (by changing their names) in the following way: the most external figure first, the figure inside both figures second and the intermediate figure third (as the order showed in the DAE file of the reference model “<code>IceRingIcePlanet</code>”) (<b>Fig. 10</b>). This is done because the order will affect how “<code>SuperBMD</code>” applies the materials to the custom model and consequently will affect the looks of the object in game.</p>
+
+<img src="../../images/t5/Fig 10.png">
+
+<b><p class="idtext">(Fig. 10 - Name order respective to each figure)</p></b>
+
+<br>
+
+<p>- Now, after all that, the model is ready, do the rest of the stuff to import the model in game and you will get what is showed on <b>Fig. 11</b>.</p>
+
+<img src="../../images/t5/Fig 11.jpg">
+
+<b><p class="idtext">(Fig. 11 - Mario staring at some nice looking ice)</p></b>
+
+<br>
+
+<hr>
+
+<p>My "<code>tutorial5</code>" model file: <a href="https://www.mediafire.com/folder/1va1r4uru36hj/tutorial5">https://www.mediafire.com/folder/1va1r4uru36hj/tutorial5</a></p>
+
+<hr>
+
+<p>- Thanks to <b>Zyphro</b> for the guidence.</p>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
