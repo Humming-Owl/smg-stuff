@@ -1,6 +1,6 @@
 # Changelog
 
-- Added 5th tutorial (Let's make some ice!).
+- Added 6th tutorial (Let's make some water!).
 
 # smg-stuff
 https://humming-owl.github.io/smg-stuff/ 
