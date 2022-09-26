@@ -1,0 +1,218 @@
+<html>
+
+<head>
+
+<meta name= "viewport" content= "width=device-width" http-equiv="Content-Type"/>
+
+<title>Let's make some water!</title>
+
+<link rel="icon" type="image/png" href="../../images/icon.png" />
+
+<link rel="stylesheet" href="../../styles.css" type="text/css">
+
+</head>
+
+<body>
+
+<div class="start">
+
+<div class="title">
+
+<h1>Let's make some water!</h1> 
+
+</div>
+
+</div>
+
+<div class="main">
+
+<div class="right">
+
+<h3><b>Contents</b></h3>
+
+<hr>
+
+<p>1. <a href="../../index.html">Introduction</a></p>
+
+<p>2. <a href="../tutorials.html">Tutorials</a></p>
+
+<p>3. <a href="../tools.html">Tools</a></p>
+
+<p>4. <a href="../other_links.html">Other links</a></p>
+
+</div>
+
+<div class="left">
+
+<h2><b>Tools needed</b></h2>
+<p>Refer to the "Tools" section for download.</p>
+
+<hr>
+
+<p>- Blender</p>
+<p>- SuperBMD</p>
+<p>- j3dview</p>
+<p>- Any text editor you like (Notepad++ is recommended)</p>
+<p>- NeoKCLCreate</p>
+<p>- Arc Convertor</p>
+<p>- Whitehole</p>
+<p>- Wiimm's ISO Tools (to get your SMG1 dump)</p>
+
+<br>
+
+<hr>
+
+<h2><b>Required tutorials:</b></h2>
+
+<p>- <a href="t4.html">Custom model with an animated in-game material</a></p>
+
+<p>- <a href="t5.html">Let's make some ice!</a></p>
+
+<br>
+
+<hr>
+
+<h2><b>Steps:</b></h2>
+
+<p>- Just like the last tutorial (<a href="t5.html">Let's make some ice!</a>) I will show you how to make some nice looking water. The "<code>water</code>" effect that I am going to use here is found on SMG1 on the "<code>CocoTwinB</code>" object from the "<code>EggStarGalaxy</code>" (<b>Fig. 1</b>).</p>
+
+<img src="../../images/t6/Fig 1.png">
+
+<b><p class="idtext">(Fig. 1 - "<code>CocoTwinB</code>" object's water)</p></b>
+
+<br>
+
+<p>- The DAE file created by "<code>SuperBMD</code>" after extracting the contents of the BDL file associated with the "<code>CocoTwinB</code>" model shows us that this "<code>water</code>" effect is composed by 3 objects (<b>Fig. 2</b>). The materials and textures for the 3 pieces are:</p>
+
+<table>
+  <tr>
+    <td><b>Object</b></td>
+    <td><b>Material</b></td>
+    <td><b>Textures</b></td>
+  </tr>
+  <tr>
+    <td>External (mesh-0)</td>
+    <td>lambert30_v</td>
+    <td>- Water_chrome0 <br> - Water_chrome0</td>
+  </tr>
+  <tr>
+    <td>Intermediate (mesh-1)</td>
+    <td>lambert27_v</td>
+    <td>- grnd3</td>
+  </tr>
+  <tr>
+    <td>Internal (mesh-2)</td>
+    <td>lambert31_v</td>
+    <td>- grnd3 <br> - Water_chrome0</td>
+  </tr>
+</table>
+
+<br>
+
+<img src="../../images/t6/Fig 2.png">
+
+<b><p class="idtext">(Fig. 2 - <code>CocoTwinB</code>'s DAE file opened in Blender)</p></b>
+
+<br>
+
+<p>- I’ve decided to make with this effect a little water planet model, just to show how this water looks like. I choose 3 UV spheres on "<code>Blender</code>” (one inside another) and assigned the respective materials to each one of them, applied "<code>Shade Smooth</code>” and also the "<code>Sphere Projection</code>” unwrap option to all spheres (<b>Fig. 3</b>).</p>
+
+<img src="../../images/t6/Fig 3.png">
+
+<b><p class="idtext">(Fig. 3 - Custom model setup for the "<code>water</code>" effect)</p></b>
+
+<br>
+
+<p>- From the DAE file we can see that one of the objects (the internal one) composing this water effect has some blue vertex paint (go to "<code>Texture</code>" view) (<b>Fig. 4</b>). I need that vertex paint color on the internal part of my custom model. To "<code>transfer</code>" vertex paint from an object to another of your choice you need to use the Blender’s "<code>Data Transfer</code>" modifier. The process in this case goes as follows:</p>
+
+<img src="../../images/t6/Fig 4.png">
+
+<b><p class="idtext">(Fig. 4 - Blue vertex paint on internal part of original DAE model)</p></b>
+
+<br>
+
+<p><b>1)</b> Import the DAE file of the original model to your custom model project and locate the desired part of it that has the vertex paint you want to transfer to your desired custom object (<b>Fig. 5</b>) ("<code>fig3</code>" will receive the vertex paint of the "<code>mesh-2</code>" object from the DAE file) (delete the "<code>skeleton_root</code>" of the DAE model so you can move the model’s pieces more freely).</p>
+
+<img src="../../images/t6/Fig 5.png">
+
+<b><p class="idtext">(Fig. 5 - Original internal object imported in custom model project)</p></b>
+
+<br>
+
+<p><b>2)</b> Create a "<code>Vertex Color</code>" for your custom object in the "<code>Data</code>" tab (press the "<code>+</code>" button) (<b>Fig. 6</b>). You need to do this before using the "<code>Data Transfer</code>" modifier.</p>
+
+<img src="../../images/t6/Fig 6.png">
+
+<b><p class="idtext">(Fig. 6 - DAE internal object imported in custom model project)</p></b>
+
+<br>
+
+<p><b>3)</b> Create a "<code>Data Transfer</code>" modifier for your custom object, select a "<code>Source Object</code>" for this modifier (the object from which you want to extract the vertex paint), in this case "<code>mesh-2</code>" (<b>Fig. 7a and 7b</b>), check the "<code>Face Corner Data</code>" box, select the "<code>VCol</code>" option, change the "<code>All Layers</code>" option at the right to the option related to the "<code>mesh-2</code>" object (in my case it is "<code>meshId2-color0</code>") and change the "<code>By name</code>" option to the "<code>Vertex Color</code>" created for our custom object from before, "<code>Col</code>" (<b>Fig. 7c</b>). Finally, hit apply and now you can delete the "<code>mesh-2</code>" object from the project.</p>
+
+<img src="../../images/t6/Fig 7a.png">
+
+<b><p class="idtext">(Fig. 7a - "<code>Data Transfer</code>" modifier)</p></b>
+
+<br>
+
+<img src="../../images/t6/Fig 7b.png">
+
+<b><p class="idtext">(Fig. 7b)</p></b>
+
+<br>
+
+<img src="../../images/t6/Fig 7c.png">
+
+<b><p class="idtext">(Fig. 7c)</p></b>
+
+<br>
+
+<p><b>Note 1:</b> it isn’t necessary to do this to all the objects of your model, I did it in this case because the blue effect wasn’t applied when converting my model to BMD with "<code>SuperBMD</code>”. This isn’t an error it is just that some objects in the game work with vertex paint and the vertex paint is not defined in the material's data, it is something else added to the model aside from the materials and the textures.</p>
+
+<p><b>Note 2:</b> By changing the position, scale and rotations of the "<code>Source Object</code>" you can change how the vertex paint will be applied to the target object.</p>
+
+<p><b>Note 3:</b> If you add the vertex paint like this to your custom models using in-game materials, the converted model (BMD/BDL) will display correctly in "<code>j3dview</code>" and "<code>Whitehole</code>".</p>
+
+<br>
+
+<p>- I exported the vertex paint from the remaining parts of the DAE file related to the parts of my custom model as well (just because I wanted to) (<b>Fig. 8</b>).</p>
+
+<img src="../../images/t6/Fig 8.png">
+
+<b><p class="idtext">(Fig. 8 - Vertex paint on the custom model)</p></b>
+
+<br>
+
+<p>- The normals for all objects of our custom model need be facing outwards for this water effect.</p>
+
+<p>- After all that, you can export your model as and FBX (remember to scale in "<code>Edit Mode</code>") and convert it to BMD by using "<code>SuperBMD</code>". You will have to use the "<code>--nosort</code>" option so that the materials on the model display correctly on "<code>j3dview/game</code>" (I don’t know yet how to explain how the sorting affects how the materials will show on game but keep in mind this when using in-game materials). After that we can see the model on "<code>j3dview</code>" and finally on game (<b>Vid. 1, Fig. 9</b>) (Remember to include the BTK file of the original model on the ARC file of your custom model so that the water gets its animation!).</p>
+
+<video controls>
+  <source src="../../images/t6/Vid 1.mp4" type="video/mp4">
+</video>
+
+<b><p class="idtext">(Vid. 1 - Water planet model with its animation in "<code>j3dview</code>")</p></b>
+
+<br>
+
+<img src="../../images/t6/Fig 9.jpg">
+
+<b><p class="idtext">(Fig. 9 - Mario standing on a new water planet)</p></b>
+
+<br>
+
+<p><b>Note 4:</b> For this custom model to work in game as showed in <b>Fig. 10</b>, I used a custom collision, a water area object (spherical) and a spherical gravitational field. In future tutorials I will cover how to deal with those.</p>
+
+<br>
+
+<hr>
+
+<p>My "<code>tutorial6</code>" model file: <a href="https://www.mediafire.com/folder/x7kgum93tgc8d/tutorial6">https://www.mediafire.com/folder/x7kgum93tgc8d/tutorial6</a></p>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
