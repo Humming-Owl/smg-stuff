@@ -158,15 +158,49 @@
 
 <br>
 
-<p>- For this “<code>ice</code>” effect setup we will set the faces of the intermediate figure inwards (<b>Fig. 9</b>). The others will keep their default (outside) face orientation. The figure inside of both figures does not matter to which direction the faces are oriented since it is a bunch of random placed faces to fill a volume.</p>
+<p>- Back in the DAE model we can see that it has the faces for its external figure pointing inwards and the intermediate one pointing outwards (<b>Fig 9a, 9b and 9c</b>).</p>
 
-<img src="../../images/t5/Fig 9.png">
+<img src="../../images/t5/Fig 9a.png">
 
-<b><p class="idtext">(Fig. 9 - Normals in intermediate figure pointing inwards)</p></b>
+<b><p class="idtext">(Fig. 9a - Normals in DAE external figure pointing inwards)</p></b>
 
 <br>
 
-<p>- The final step will be ordering the objects on “<code>Blender</code>” (by changing their names) in the following way: the most external figure first, the figure inside both figures second and the intermediate figure third (as the order showed in the DAE file of the reference model “<code>IceRingIcePlanet</code>”) (<b>Fig. 10</b>). This is done because the order will affect how “<code>SuperBMD</code>” applies the materials to the custom model and consequently will affect the looks of the object in game.</p>
+<img src="../../images/t5/Fig 9b.png">
+
+<b><p class="idtext">(Fig. 9b - Normals in DAE intermediate figure pointing outwards)</p></b>
+
+<br>
+
+<img src="../../images/t5/Fig 9c.png">
+
+<b><p class="idtext">(Fig. 9c - Normals in DAE internal figure)</p></b>
+
+<br>
+
+<p>- Then, for this “<code>ice</code>” effect setup we will follow the same face orientation each part of the respective DAE model has: normals on the external figure point inwards (<b>Fig. 9d</b>) and outwards on the intermediate part (<b>Fig 9e and 9f</b>).</p>
+
+<img src="../../images/t5/Fig 9d.png">
+
+<b><p class="idtext">(Fig. 9d - Normals in custom external figure pointing inwards)</p></b>
+
+<br>
+
+<img src="../../images/t5/Fig 9e.png">
+
+<b><p class="idtext">(Fig. 9e - Normals in custom intermediate figure pointing inwards)</p></b>
+
+<br>
+
+<img src="../../images/t5/Fig 9f.png">
+
+<b><p class="idtext">(Fig. 9f - Normals in custom internal figure)</p></b>
+
+<br>
+
+<p><b>Note:</b> You can't actually tell to which direction the internal figure's faces point since it isn't a closed surface. Any direction will be fine so you can keep the default one "<code>Blender</code>" applies.</p>
+
+<p>- The final step will be ordering the objects on “<code>Blender</code>” (by changing their names) in the following way: the most external figure first, the figure inside both figures second and the intermediate figure third (as the order showed in the DAE model “<code>IceRingIcePlanet</code>”) (<b>Fig. 10</b>). This is done because the order will affect how “<code>SuperBMD</code>” applies the materials to the custom model and consequently will affect the looks of the object in game.</p>
 
 <img src="../../images/t5/Fig 10.png">
 
@@ -174,7 +208,15 @@
 
 <br>
 
-<p>- Now, after all that, the model is ready, do the rest of the stuff to import the model in game and you will get what is showed on <b>Fig. 11</b>.</p>
+<p>- Now, after all that, "compile" the model using "<code>SuperBMD</code>" using the "<code>--nosort</code>" option at the end of the command (<b>IMPORTANT</b>). This will ensure the proper material effect.</p>
+
+<p>Formated code example:</p>
+
+<p><code>path\to\SuperBMD.exe &ltyour_model&gt.fbx --mat &ltyour-materials&gt.json --texheader &ltyour-textures&gt.json --rotate --nosort</code></p>
+
+<p><b>Linux users</b>, remember to use a forward slash instead of a backslash for paths!</p>
+
+<p>Now you can open the converted model file on "<code>j3dview</code>", save it as BDL in a folder with the same name as the model, do the rest of the stuff to import the model in game and you will get what is showed on <b>Fig. 11</b>.</p>
 
 <img src="../../images/t5/Fig 11.jpg">
 
