@@ -1,6 +1,6 @@
 # Changelog
 
-- Added 6th tutorial (Let's make some water!).
+- Added 7th tutorial (Using a custom collision model for your custom visual model).
 
 # smg-stuff
 https://humming-owl.github.io/smg-stuff/ 
