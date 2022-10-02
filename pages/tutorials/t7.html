@@ -1,0 +1,173 @@
+<html>
+
+<head>
+
+<meta name= "viewport" content= "width=device-width" http-equiv="Content-Type"/>
+
+<title>Using a custom collision model for your custom visual model</title>
+
+<link rel="icon" type="image/png" href="../../images/icon.png" />
+
+<link rel="stylesheet" href="../../styles.css" type="text/css">
+
+</head>
+
+<body>
+
+<div class="start">
+
+<div class="title">
+
+<h1>Using a custom collision model for your custom visual model</h1> 
+
+</div>
+
+</div>
+
+<div class="main">
+
+<div class="right">
+
+<h3><b>Contents</b></h3>
+
+<hr>
+
+<p>1. <a href="../../index.html">Introduction</a></p>
+
+<p>2. <a href="../tutorials.html">Tutorials</a></p>
+
+<p>3. <a href="../tools.html">Tools</a></p>
+
+<p>4. <a href="../other_links.html">Other links</a></p>
+
+</div>
+
+<div class="left">
+
+<h2><b>Tools needed</b></h2>
+<p>Refer to the "Tools" section for download.</p>
+
+<hr>
+
+<p>- Blender</p>
+<p>- SuperBMD</p>
+<p>- j3dview</p>
+<p>- Any text editor you like (Notepad++ is recommended)</p>
+<p>- NeoKCLCreate</p>
+<p>- Arc Convertor</p>
+<p>- Whitehole</p>
+<p>- Wiimm's ISO Tools (to get your SMG1 dump)</p>
+
+<br>
+
+<hr>
+
+<h2><b>Required tutorials:</b></h2>
+
+<p>- <a href="t1.html">How to import a custom model into SMG1</a></p>
+
+<p>- <a href="t2.html">How to import a custom model into SMG1 with 1 in-game material</a></p>
+
+<p>- <a href="t3.html">How to import a custom model into SMG1 with 2 or more in-game materials</a></p>
+
+<p>- <a href="t4.html">Custom model with an animated in-game material</a></p>
+
+<p>- <a href="t5.html">Let's make some ice!</a></p>
+
+<p>- <a href="t6.html">Let's make some water!</a></p>
+
+<br>
+
+<hr>
+
+<h2><b>Steps:</b></h2>
+
+<p>- The title of this tutorial might not be very self-explanatory so let me elaborate a little after starting.</p>
+
+<p>- When importing a custom model into SMG1 you have to export a FBX and OBJ file of your "<code>Blender</code>" model so you can convert the FBX through some processes into a BDL and the OBJ through some other processes into a KCL and a PA files.</p>
+
+<p>- The BDL file is the 3D model of the model you want to import into the game. In other words, it is the <b>visual part</b> of the model. And the KCL and PA files are the <b>collision part</b> of the model.</p>
+
+<p>- When making a simple model we get both FBX and OBJ files from the same "<code>Blender</code>" model and that is because we are assuming that the <b>visual model</b> will have a <b>collision model</b> shaped the same as the <b>visual model</b> (like in the first tutorials). In some cases you need to define for a <b>custom model</b> a <b>custom collision model</b>, the reason behind this is that you don’t want collision for some parts of the <b>visual model</b>. Why? You may ask, well, might be because not everything we want on our model is completely solid (maybe we are making a water model, water isn’t solid), or, we are defining a “<b>better</b>” collision for our model so it isn’t annoying for a player to interact with it, or, we don’t need collision at all because it is a decorative model. In each case that would be a <b>custom collision</b>.</p>
+
+<p>- For this tutorial I will show the case for defining a “better” collision for a model so let’s take a look at <b>Fig. 1a and 1b</b>. It is a very standard staircase.</p>
+
+<img src="../../images/t7/Fig 1a.png">
+
+<b><p class="idtext">(Fig. 1a - Custom model example - Staircase)</p></b>
+
+<br>
+
+<img src="../../images/t7/Fig 1b.png">
+
+<b><p class="idtext">(Fig. 1b - Example model with its materials applied)</p></b>
+
+<br>
+
+<table>
+  <tr>
+    <td><b>Material</b></td>
+    <td><b>Object</b></td>
+  </tr>
+  <tr>
+    <td>MetalMat</td>
+    <td>UFOStrongA - SMG1</td>
+  </tr>
+  <tr>
+    <td>WoodMat_v</td>
+    <td>DiskGardenPlanet - SMG1</td>
+  </tr>
+</table>
+
+
+<p>- I don’t want the <b>collision</b> for this model being the same as the <b>visual model</b>; I want Mario walking over the stairs as a ramp so that jumping isn’t necessary to climb each stair step to get on top of the custom model. A model like the one showed on <b>Fig. 2</b> is the best for that.</p>
+
+<img src="../../images/t7/Fig 2.png">
+
+<b><p class="idtext">(Fig. 2 - Collision model for the visual model)</p></b>
+
+<br>
+
+<p>- So my FBX file will be the <b>staircase model</b> and my OBJ file will be the <b>ramp model</b>. Be sure to add the same materials in the same/similar faces of the <b>collision model</b> as in the <b>visual model</b> so that you can apply the respective collision properties of it in “<code>NeoKCLCreate</code>” (the same materials just to know which parts of the <b>collision model</b> should have a collision setting determined by the <b>visual model</b>) (<b>Fig. 3</b>).</p>
+
+<img src="../../images/t7/Fig 3.png">
+
+<b><p class="idtext">(Fig. 3 - Collision model with the same materials applied)</p></b>
+
+<br>
+
+<p><b>Note 1</b>: you don’t have to add textures for the materials on the <b>collision model</b>, just assign the materials. I just did it so you can view which were those similar faces I mentioned before.</p>
+
+<p><b>Note 2</b>: As a suggestion keep both of your <b>collision and visual models</b> into different "<code>Blender</code>" projects. You can keep them on the same project if you know what you are doing.</p>
+
+<p><b>Note 3</b>: As you are using different models for the <b>visual part</b> and the <b>collision part</b> of the custom model you only need to triangulate the <b>custom collision model</b>.</p>
+
+<p>- After exporting the <b>visual model</b> in FBX and the <b>collision model</b> in OBJ (be sure they are oriented/sized the same so they show in the same place in game), convert the FBX model into a BDL with “<code>SuperBMD</code>” and “<code>j3dview</code>”, and convert the OBJ file in a KCL and PA file with “<code>NeoKCLCreate</code>” indicating your <b>collision preferences</b> (<b>Fig. 4</b>).</p>
+
+<img src="../../images/t7/Fig 4.png">
+
+<b><p class="idtext">(Fig. 4 - Collision model's OBJ file opened in "<code>NeoKCLCreate</code>" under "<code>Wine</code>" on Linux)</p></b>
+
+<br>
+
+<p>- Finally, do the rest you know to pack those into an ARC file (BDL, KCL and PA) and test them on game to see if they are positioned/working correctly as you wished (<b>Fig. 5</b>).</p>
+
+<img src="../../images/t7/Fig 5.jpg">
+
+<b><p class="idtext">(Fig. 5 - Mario grabbing to the collision model, the diagonal of the ramp)</p></b>
+
+<br>
+
+<p><b>Note 4</b>: if you want no collision for your model you can simply not add any KCL and PA files into the respective ARC file. If you keep only the BDL file of your custom model in the ARC file, you will pass through it in the game as if it were a ghost.</p>
+
+<hr>
+
+<p>My "<code>tutorial7</code>" model files (visual and collision): <a href="https://www.mediafire.com/folder/6i9ainnaa2bef/tutorial7">https://www.mediafire.com/folder/6i9ainnaa2bef/tutorial7</a></p>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
