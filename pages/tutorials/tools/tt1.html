@@ -1,0 +1,227 @@
+<html>
+
+<head>
+
+<meta name= "viewport" content= "width=device-width" http-equiv="Content-Type"/>
+
+<title>Whitehole Setup</title>
+
+<link rel="icon" type="image/png" href="../../../images/icon.png" />
+
+<link rel="stylesheet" href="../../../styles.css" type="text/css">
+
+</head>
+
+<body>
+
+<div class="start">
+
+<div class="title">
+
+<h1>Whitehole Setup</h1> 
+
+</div>
+
+</div>
+
+<div class="main">
+
+<div class="right">
+
+<h3><b>Contents</b></h3>
+
+<hr>
+
+<p>1. <a href="../../../index.html">Introduction</a></p>
+
+<p>2. <a href="../../tutorials.html">Tutorials</a></p>
+
+<p>3. <a href="../../tools.html">Tools</a></p>
+
+<p>4. <a href="../../other_links.html">Other links</a></p>
+
+</div>
+
+<div class="left">
+
+<h2><b>Quick Recap</b></h2>
+
+<p>Before using some of the main <b>SMG modding tools</b> you need to install some depedencies on your system so that they work properly. The setup for the tools in this tutorial will be for all <code>Whiteholes</code> in existence that can be used in <b>SMG1 modding</b>.</p>
+
+<p><code>Whitehole</code> is the first and only (at least as of now) <b>SMG level editor</b> that exists and receives updates that is compatible with <b>Windows/Linux/MacOS</b> due to being <b>Java</b> written. <b>It has a popular fame of not working properly</b> mostly because of the setup for it to work wasn’t explained or clear to understand, also because there are several versions of Whitehole that people use and recommend (outdated ones) that lead to general confusion, and, essentially, because <b>Java</b> sucks. The relevant Whiteholes to mod <b>SMG1</b> are <code>Whitehole Despaghettification</code>, <code>Whitehole v1.7</code> and <code>Whitehole for SMG1</code>. The first 2 Whiteholes are the most used being <code>Whitehole Despaghettification</code> the one I recommend to use for <b>SMG1/2</b> in general (known also as <code>Whitehole Despag</code> or only <code>Despag</code>), and, the last Whitehole (<code>Whitehole for SMG1</code>) is only used for a <b>built-in Zone-Layer editor</b> that is the only one that works (as of now) with <b>SMG1</b>.</p>
+
+<p><b>NOTE:</b> Keep in mind that the setup explanations can change overtime.</p>
+
+<br>
+
+<h2><b>Java</b></h2>
+
+<p>Regarding the <b>Java</b> to be installed for each tool, you don’t need to install the <b>JDK</b> (<b>Java Development Kit</b>) as it is only the <b>JRE</b> (<b>Java Runtime Environment</b>) that is needed to run JAR files. <b>Java</b> versions that are shown from the "<code>java -version</code>” command (executed from terminal or CMD depending on your platform) are read in the following way:</p>
+
+<br>
+
+<p><b>Java 8:</b></p>
+
+<img src="../../../images/tt1/Fig 1.png">
+
+<b><p class="idtext">(Fig. 1 - "<code>java -version</code>" command output for Java 8)</p></b>
+
+<br>
+
+<p><b>Java 11:</b></p>
+
+<img src="../../../images/tt1/Fig 2.png">
+
+<b><p class="idtext">(Fig. 2 - "<code>java -version</code>" command output for Java 11)</p></b>
+
+<br>
+
+<p><b>Java 17:</b></p>
+
+<img src="../../../images/tt1/Fig 3.png">
+
+<b><p class="idtext">(Fig. 3 - "<code>java -version</code>" command output for Java 17)</p></b>
+
+<br>
+
+<p>You can get <b>Java</b> builds for your platform on this link (if you use Linux your package manager might have the version you need already) --> <a href="https://adoptium.net/temurin/releases">Link</a><p>
+
+
+<p>To set the default <b>Java</b> on your system, there is a certain procedure depending on the platform you are using:</p>
+
+<br>
+
+<p><b>Set default Java on Windows</b></p>
+
+<p>It is a mess to set the default <b>JRE</b> on Windows, what I do is to have all <b>JREs</b> offline installers I use, and, when I need to use one of them, I uninstall all of the others so that the default <b>JRE</b> is the only <b>JRE</b> left installed.</p>
+
+<p>To check the default <b>JRE</b> being used type on a CMD window “<code>java -version</code>”.</p>
+
+<br>
+
+<p><b>Set default Java on Linux (Debian-based)</b></p>
+
+<p>To set the default <b>JRE</b> on a Debian-based system type this command on terminal:</p>
+
+<p><code>sudo update-alternatives --config java</code></p>
+
+<p>and select the one you want to set as the default one. Check the “<code>java -version</code>” command output at the end.</p>
+
+<br>
+
+<p><b>Set default Java on MacOS</b></p>
+
+<p>You can change the default <b>JRE</b> to be executed on MacOS by following these steps --> <a href="https://stackoverflow.com/a/24657630">Link</a></p>
+
+<p>At the end, check the “<code>java -version</code>” command output.</p>
+
+<br>
+
+<h2><b>Whitehole Despaghettification (By Aurum/SunakazeKun)</b></h2>
+
+<p>Recommended for general use with both <b>SMG1/2</b>.</p>
+
+<p><b>Official Repository (GitHub)</b> --> <a href="https://github.com/SunakazeKun/Whitehole-Despaghettification">Link</a><p>
+<p><b>Direct link to latest release (May 14, 2022 - “Despaghettification 140522” Pre-release)</b> --> <a href="https://github.com/SunakazeKun/Whitehole-Despaghettification/releases/download/DespagPrev-140522/Whitehole.zip">Link</a><p>
+
+<p>This Whitehole version works with <b>JRE 11</b> and greater.<p>
+
+<p><b>- Windows users:</b></p>
+
+<p>Get <b>JRE 11</b> or greater from here (MSI installer) --> <a href="https://adoptium.net/temurin/releases/?version=11">Link</a></p>
+
+<p><b>- Linux users (Debian-based):</b></p>
+
+<p>Get <b>JRE 11</b> by typing this command on terminal:</p>
+
+<p><code>sudo apt install openjdk-11-jre</code></p>
+
+<p>This will install the <b>JRE 11</b> that provides APT (at least on <b>Ubuntu 18.04</b>) (if you prefer, you can install instead the openjdk-17-jre package that provides the <b>JRE 17</b> - it will also work).</p>
+
+<p><b>- MacOS users:</b></p>
+
+<p>Get <b>JRE 11</b> or greater from here --> <a href="https://adoptium.net/temurin/releases/?version=11">Link</a></p>
+
+
+<p><b>- Object Database setup:</b></p>
+
+<p>The object database file “<code>objectdb.json</code>” should be already in the “<code>data</code>” folder of the tool so you don’t have to set anything up for it.</p>
+
+<br>
+
+<h2><b>Whitehole v1.7 (By TheSunCat)</b></h2>
+
+<p>Works for both <b>SMG1/2</b>.</p>
+
+<p><b>Official Repository (GitHub)</b> --> <a href="https://github.com/TheSunCat/Whitehole">Link</a><p>
+<p><b>Direct link to latest release (April 4, 2022 - “Whitehole 1.7 Fixed” Latest)</b> --> <a href="https://github.com/TheSunCat/Whitehole/releases/download/v1.7fix/Whitehole.zip">Link</a><p>
+
+<p>This Whitehole is similar to Despag but with the difference that needs specifically <b>JRE 17</b> to work.<p>
+
+<p><b>- Windows users:</b></p>
+
+<p>Get <b>JRE 17</b> from here (MSI installer) --> <a href="https://adoptium.net/temurin/releases/?version=17">Link</a></p>
+
+<p><b>- Linux users (Debian-based):</b></p>
+
+<p>Get <b>JRE 17</b> by typing this command on terminal:</p>
+
+<p><code>sudo apt install openjdk-17-jre</code></p>
+
+<p>This will install the <b>JRE 17</b> that provides APT (at least on <b>Ubuntu 18.04</b>).</p>
+
+<p><b>- MacOS users:</b></p>
+
+<p>Get <b>JRE 17</b> from here --> <a href="https://adoptium.net/temurin/releases/?version=17">Link</a></p>
+
+
+<p><b>- Object Database setup:</b></p>
+
+<p>The object database file “<code>objectdb.xml</code>” is not within the program files. Grab it from <a href="https://raw.githubusercontent.com/SunakazeKun/galaxydatabase/main/objectdb.xml">here</a> and put it in the same place as the “<code>Whitehole.jar</code>” file.</p>
+
+<br>
+
+<h2><b>Whitehole for SMG1 (By Aurum/SunakazeKun) (Archived)</b></h2>
+
+<p>Only to use for its <b>Zone-Layer built-in editor</b>.</p>
+
+<p><b>Official Repository (GitHub)</b> --> <a href="https://github.com/SunakazeKun/Whitehole-for-SMG1">Link</a><p>
+<p><b>Direct link to latest release (Dec 29, 2019 - “v1.0 experimental” Latest)</b> --> <a href="https://github.com/SunakazeKun/Whitehole-for-SMG1/releases/download/v1.0/WhiteholeForSMG1.zip">Link</a><p>
+
+<p>Only works for SMG1 and its repository is archived. It works only with <b>JRE 8</b>.<p>
+
+<p><b>- Windows users:</b></p>
+
+<p>Get <b>JRE 8</b> from here (MSI installer) --> <a href="https://adoptium.net/temurin/releases/?version=8">Link</a></p>
+
+<p><b>- Linux users (Debian-based):</b></p>
+
+<p>Get <b>JRE 8</b> by typing this command on terminal:</p>
+
+<p><code>sudo apt install openjdk-8-jre</code></p>
+
+<p>This will install the <b>JRE 8</b> that provides APT (at least on <b>Ubuntu 18.04</b>).</p>
+
+<p><b>- MacOS users:</b></p>
+
+<p>Get <b>JRE 8</b> from here --> <a href="https://adoptium.net/temurin/releases/?version=17">Link</a></p>
+
+<br>
+
+<h2>Big Recommendation</h2>
+
+<p> If executing <b>Despag</b> or <b>Whitehole v1.7</b> from <b>Windows</b> and you experience issues (galaxies not opening or part of the rendering screen of the program is blue) create a <b>BAT</b> file (In the same place as the "<code>Whitehole.jar</code>" file) (TXT file renamed to BAT) and <b>paste</b> this code on it:
+
+<p><code>java --add-exports=java.desktop/sun.awt=ALL-UNNAMED -Dsun.java2d.uiScale=1.0 -jar Whitehole.jar</code></p>
+
+<p> Execute the <b>BAT</b> file and your issue may be corrected (double click on it).</p>
+
+<br>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
