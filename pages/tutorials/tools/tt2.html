@@ -1,0 +1,177 @@
+<html>
+
+<head>
+
+<meta name= "viewport" content= "width=device-width" http-equiv="Content-Type"/>
+
+<title>j3dview and j3d animation editor Setup</title>
+
+<link rel="icon" type="image/png" href="../../../images/icon.png" />
+
+<link rel="stylesheet" href="../../../styles.css" type="text/css">
+
+</head>
+
+<body>
+
+<div class="start">
+
+<div class="title">
+
+<h1>j3dview and j3d animation editor Setup</h1> 
+
+</div>
+
+</div>
+
+<div class="main">
+
+<div class="right">
+
+<h3><b>Contents</b></h3>
+
+<hr>
+
+<p>1. <a href="../../../index.html">Introduction</a></p>
+
+<p>2. <a href="../../tutorials.html">Tutorials</a></p>
+
+<p>3. <a href="../../tools.html">Tools</a></p>
+
+<p>4. <a href="../../other_links.html">Other links</a></p>
+
+</div>
+
+<div class="left">
+
+<h2><b>Quick Intro</b></h2>
+
+<p>Before using some of the <b>main SMG modding tools</b> you need to install some dependencies on your computer so that they work properly. The setup for the tools in this tutorial will be for <b>j3dview</b> and <b>j3d-animation-editor</b>. They are powerful tools, with the first one being able to view and edit certain aspects of <b>BMD/BDL models</b> and the second for editing and creating <b>Nintendo 3D animation files</b>.</p>
+
+<img src="../../../images/tt2/Fig 1.png">
+
+<b><p class="idtext">(Fig. 1 - a SMG1 planet model opened in "<code>j3dview</code>")</p></b>
+
+<br>
+
+<img src="../../../images/tt2/Fig 2.png">
+
+<b><p class="idtext">(Fig. 2 - an animation file for materials opened in "<code>j3d-animation-editor</code>")</p></b>
+
+<br>
+
+<h2><b>Python</b></h2>
+
+<p>Both tools run with different versions of <b>Python</b> and with a few <b>Python modules</b>. Fortunately, in contrast with <b>Java</b>, you can use different <b>Python installations</b> without much issue (I don’t know how in <b>MacOS</b> at the moment).</p>
+
+<br>
+
+<h2><b>j3dview (By RenolY2)</b></h2>
+
+<p>Serves to view/edit textures/test animations on <b>BMD/BDL models</b>.</p>
+
+<p><b>Official Repository (GitHub)</b> --> <a href="https://github.com/RenolY2/j3dview">Link</a><p>
+<p><b>Direct link to latest release (June 13, 2022 - "j3dview v0.6.1.1" Latest)</b> --> <a href="https://github.com/RenolY2/j3dview/releases/download/v0.6.1.1/j3dview.zip">Link</a><p>
+
+<p>Runs with <b>Python 3.5</b> and requires the <b>PyQt5</b>, <b>PyOpenGL</b>, <b>NumPy</b> and <b>Cython Python modules</b> to work.<p>
+
+<br>
+
+<h3><b>- Windows users:</b></h3>
+
+<p>Download and install <b>Python 3.5</b> for your platform from here -->  <a href="https://www.python.org/downloads/windows/">Link</a></p>
+
+<p><b>Direct link for installers:</b></p>
+
+<p>- Windows <b>32 bits</b> --> <a href="https://www.python.org/ftp/python/3.5.4/python-3.5.4.exe">https://www.python.org/ftp/python/3.5.4/python-3.5.4.exe</a></p>
+<p>- Windows <b>64 bits</b> --> <a href="https://www.python.org/ftp/python/3.5.4/python-3.5.4-amd64.exe">https://www.python.org/ftp/python/3.5.4/python-3.5.4-amd64.exe</a></p>
+
+<p>After installation, open a <b>CMD window</b> and type,</p>
+
+<p><code>py -3.5 -m pip install --upgrade pip</code></p>
+<p><code>py -3.5 -m pip install PyQt5 PyOpenGL NumPy Cython</code></p>
+
+<p>Now go to the <b>j3dview</b> program folder, open a <b>CMD window</b> on that path and the program should execute with the following:</p>
+
+<p><code>py -3.5 j3dview.py</code></p>
+
+<br>
+
+<h3><b>- Linux users (Debian-based):</b></h3>
+
+<p>Install <b>Python 3.5</b> with APT typing on the <b>terminal</b> the following (at least with <b>Ubuntu 18.04</b>):</p>
+
+<p><code>sudo apt install python3.5</code></p>
+
+<p>This will install <b>Python 3.5</b> and then to install the <b>PyQt5</b>, <b>PyOpenGL</b>, <b>NumPy</b> and <b>Cython Python modules</b> type:</p>
+
+<p><code>python3.5 -m pip install --upgrade pip</code></p>
+<p><code>python3.5 -m pip install PyQt5 PyOpenGL NumPy Cython</code></p>
+
+<p>After installation you can verify if everything was setup correctly by running the program by typing on the <b>terminal</b> (on the same place the program files are):</p>
+
+<p><code>python3.5 j3dview.py</code></p>
+
+<p>The program should open without errors.</p>
+
+<br>
+
+<h2><b>j3d-animation-editor (By Tarsa129)</b></h2>
+
+<p>Serves to view/edit/create <b>Nintendo animation files</b>.</p>
+
+<p><b>Official Repository (GitHub)</b> --> <a href="https://github.com/tarsa129/j3d-animation-editor">Link</a><p>
+<p><b>Direct link to latest release</b> --> <a href="https://github.com/tarsa129/j3d-animation-editor/archive/refs/heads/master.zip">Link</a><p>
+
+<p>Runs with <b>Python 3.7</b> or greater and requires the <b>PyQt5 Python module</b> to work.<p>
+
+<br>
+
+<h3><b>- Windows users:</b></h3>
+
+<p>Download and install <b>Python 3.7</b> for your platform from here -->  <a href="https://www.python.org/downloads/windows/">Link</a></p>
+
+<p><b>Direct link for installers:</b></p>
+
+<p>- Windows <b>32 bits</b> --> <a href="https://www.python.org/ftp/python/3.7.9/python-3.7.9.exe">https://www.python.org/ftp/python/3.7.9/python-3.7.9.exe</a></p>
+<p>- Windows <b>64 bits</b> --> <a href="https://www.python.org/ftp/python/3.7.9/python-3.7.9-amd64.exe">https://www.python.org/ftp/python/3.7.9/python-3.7.9-amd64.exe</a></p>
+
+<p>After installation, open a <b>CMD window</b> and type,</p>
+
+<p><code>py -3.7 -m pip install --upgrade pip</code></p>
+<p><code>py -3.7 -m pip install PyQt5</code></p>
+
+<p>Now go to the <b>j3d-animation-editor</b> program folder, open a <b>CMD window</b> on that path and the program should execute with the following:</p>
+
+<p><code>py -3.7 animation_editor.py</code></p>
+
+<br>
+
+<h3><b>- Linux users (Debian-based):</b></h3>
+
+<p>Install <b>Python 3.7</b> with APT typing on the <b>terminal</b> the following (at least with <b>Ubuntu 18.04</b>):</p>
+
+<p><code>sudo apt install python3.7</code></p>
+
+<p>This will install <b>Python 3.7</b> and then to install the <b>PyQt5 module</b> type:</p>
+
+<p><code>python3.7 -m pip install --upgrade pip</code></p>
+<p><code>python3.7 -m pip install PyQt5</code></p>
+
+<p>After installation you can verify if everything was setup correctly by running the program by typing on the <b>terminal</b> (on the same place the program files are):</p>
+
+<p><code>python3.7 animation_editor.py</code></p>
+
+<p>The program should open without errors.</p>
+
+<br>
+
+<br>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
