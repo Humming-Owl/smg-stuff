@@ -1,6 +1,8 @@
 # Changelog
 
-- Added 7th tutorial (Using a custom collision model for your custom visual model).
+- Added Tutorial on how to setup WIT (Wiimm's ISO Tools) and WST (Wiimm's SZS Toolset).
+- Added Tutorial on how to setup j3dview and j3d-animation-editor.
+- Added Tutorial on how to setup Whitehole.
 
 # smg-stuff
 https://humming-owl.github.io/smg-stuff/ 
