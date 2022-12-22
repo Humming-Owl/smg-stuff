@@ -1,0 +1,110 @@
+<html>
+
+<head>
+
+<meta name= "viewport" content= "width=device-width" http-equiv="Content-Type"/>
+
+<title>How to get a dump of SMG1</title>
+
+<link rel="icon" type="image/png" href="../../../images/icon.png" />
+
+<link rel="stylesheet" href="../../../styles.css" type="text/css">
+
+</head>
+
+<body>
+
+<div class="start">
+
+<div class="title">
+
+<h1>How to get a dump of SMG1</h1> 
+
+</div>
+
+</div>
+
+<div class="main">
+
+<div class="right">
+
+<h3><b>Contents</b></h3>
+
+<hr>
+
+<p>1. <a href="../../../index.html">Introduction</a></p>
+
+<p>2. <a href="../../tutorials.html">Tutorials</a></p>
+
+<p>3. <a href="../../tools.html">Tools</a></p>
+
+<p>4. <a href="../../other_links.html">Other links</a></p>
+
+</div>
+
+<div class="left">
+
+<h2><b>Tools needed</b></h2>
+<p>Refer to the "Tools" section for download.</p>
+
+<hr>
+
+<p>- Wiimm's ISO Tools (WIT)</p>
+
+<hr>
+
+<h2><b>Steps:</b></h2>
+
+<h3><b>For Windows:</b></h3>
+
+<p>- Open a <b>CMD window</b> on the same place the <b>WBFS/ISO</b> file of the game is and enter the following command:</p>
+
+<p><code>wit extract “&#60;game file name&#62;” ”.\temp”</code></p>
+
+<img src="../../../images/tb1/Fig. 1.png">
+
+<b><p class="idtext">(Fig. 1)</p></b>
+
+<br>
+
+<p>- After entering this command, <b>WIT</b> will check for the “<code>&#60;game file name&#62;</code>” file in that directory (a <b>WBFS or ISO</b> file, for example “<code>RMGE01.wbfs</code>”) and will create, on the same directory the game file is, a folder named “<code>temp</code>” to be filled with the extracted game files (<b>Fig. 2</b>).</p>
+
+<img src="../../../images/tb1/Fig. 2.png">
+
+<b><p class="idtext">(Fig. 2 - "<code>WIT</code>" extracting the contents of a WBFS game file)</p></b>
+
+<br>
+
+<p>- <b>Wait</b> for the process to finish (<b>Fig. 3</b>) and, after that, <b>the game files will be divided in 3 folders</b> within the “<code>temp</code>” folder: “<code>disc</code>”, “<code>files</code>” and “<code>sys</code>”. The second folder (“<code>files</code>”) is the folder to be used with <b>Whitehole</b> and the third folder (“<code>sys</code>”) is the one containing the “<code>main.dol</code>” file (among other files) of the game (I’ve been told its like the main executable of the game) (<b>Fig. 4</b>).</p>
+
+<img src="../../../images/tb1/Fig. 3.png">
+
+<b><p class="idtext">(Fig. 3 - "<code>WIT</code>" finishing the extraction of the contents of the WBFS file)</p></b>
+
+<br>
+
+<img src="../../../images/tb1/Fig. 4.png">
+
+<b><p class="idtext">(Fig. 4 - Folders contained in the "<code>temp</code>" folder)</p></b>
+
+<br>
+
+<h3><b>For Linux/MacOS:</b></h3>
+
+<p>- Applies the same as with <b>Windows</b> (<b>above</b>) but the command to be used instead is:</p>
+
+<p><code>wit extract “&#60;game file name&#62;” ”temp”</code></p>
+
+<br>
+
+<hr>
+
+<p><b>NOTE</b>: a dump can also be obtained with the <b>Dolphin Emulator</b> but, as I don’t use it, I don’t cover it here.</p>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
