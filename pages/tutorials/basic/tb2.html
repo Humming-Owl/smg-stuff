@@ -1,0 +1,160 @@
+<html>
+
+<head>
+
+<meta name= "viewport" content= "width=device-width" http-equiv="Content-Type"/>
+
+<title>Convert PNG to BTI and viceversa</title>
+
+<link rel="icon" type="image/png" href="../../../images/icon.png" />
+
+<link rel="stylesheet" href="../../../styles.css" type="text/css">
+
+</head>
+
+<body>
+
+<div class="start">
+
+<div class="title">
+
+<h1>Convert PNG to BTI and viceversa</h1> 
+
+</div>
+
+</div>
+
+<div class="main">
+
+<div class="right">
+
+<h3><b>Contents</b></h3>
+
+<hr>
+
+<p>1. <a href="../../../index.html">Introduction</a></p>
+
+<p>2. <a href="../../tutorials.html">Tutorials</a></p>
+
+<p>3. <a href="../../tools.html">Tools</a></p>
+
+<p>4. <a href="../../other_links.html">Other links</a></p>
+
+</div>
+
+<div class="left">
+
+<h2><b>Tools needed</b></h2>
+<p>Refer to the "Tools" section for download.</p>
+
+<hr>
+
+<p>- Wiimm's SZS Toolset (WST)</p>
+
+<hr>
+
+<h2><b>Steps:</b></h2>
+
+<p>This process is mostly used when replacing textures on <b>BMD/BDL models</b> with <b>j3dview</b>.</p>
+
+<br>
+
+<hr>
+
+<p><b>Convert PNG to BTI</b></p>
+
+<hr>
+
+<p>- Open a <b>CMD window</b> in the same place the <b>PNG file</b> you want to convert is (<b>Fig. 1</b>).</p>
+
+<img src="../../../images/tb2/Fig. 1.png">
+
+<b><p class="idtext">(Fig. 1)</p></b>
+
+<br>
+
+<p>- Type and enter the following command: <code>wimgt copy “&#60;input PNG file&#62;” “&#60;output BTI file&#62;”</code> (<b>Fig. 2</b>).</p>
+
+<img src="../../../images/tb2/Fig. 2.png">
+
+<b><p class="idtext">(Fig. 2)</p></b>
+
+<br>
+
+<p>- After doing that a <b>BTI file</b> should create on the same folder as the <b>PNG file</b> (<b>Fig. 3</b>).
+</p>
+
+<img src="../../../images/tb2/Fig. 3.png">
+
+<b><p class="idtext">(Fig. 3)</p></b>
+
+<br>
+
+<p><b>Note</b>: <b>BTI files</b> are always greater in size in relation to the <b>PNG file</b> from were it was created because of how mipmaps work.</p>
+
+<p>- Alternatively, you can create a <b>BATCH file</b> containing the following code (you can name it “<code>png-to-bti.bat</code>” for example):</p>
+
+<div class="longCode">
+	<p>wimgt copy %1 "%~dp1%~n1.bti"</p>
+	<p>pause</p>
+</div>
+
+<p>- Then, just drag and drop the <b>PNG file</b> you want to convert into the <b>BATCH file</b> and a <b>BTI file</b> should create on the same place the <b>PNG file</b> dragged and dropped is.</p>
+
+<br>
+
+<hr>
+
+<p><b>Convert BTI to PNG</b></p>
+
+<hr>
+
+<p>- Open a <b>CMD window</b> in the same place the <b>BTI file</b> you want to convert is (<b>Fig. 4</b>).</p>
+
+<img src="../../../images/tb2/Fig. 4.png">
+
+<b><p class="idtext">(Fig. 4)</p></b>
+
+<br>
+
+<p>- Type and enter the following command: <code>wimgt copy “&#60;input BTI file&#62;” “&#60;output PNG file&#62; --no-mm”</code> (<b>Fig. 5</b>).</p>
+
+<img src="../../../images/tb2/Fig. 5.png">
+
+<b><p class="idtext">(Fig. 5)</p></b>
+
+<br>
+
+<p>- After doing that a <b>PNG file</b> should create on the same folder as the <b>BTI file</b> (<b>Fig. 3</b>).
+</p>
+
+<img src="../../../images/tb2/Fig. 6.png">
+
+<b><p class="idtext">(Fig. 6)</p></b>
+
+<br>
+
+<p><b>Note 1</b>: <b>BTI files</b> extracted from <b>j3dview</b> can’t be converted/processed by <b>WST’s wimgt</b> for some reason. Other tool I tried to convert a <b>j3dview exported BTI file</b> said that the file was corrupted (maybe <b>j3dview</b> does not export correctly <b>BTI files</b>?).</p>
+
+<p><b>Note 2</b>: the "<code>--no-mm</code>" flag is used to only get the base image used in the <b>BTI file</b> rather than all images within it (mipmaps).</p>
+
+<p>- Alternatively, you can create a <b>BATCH file</b> containing the following code (you can name it “<code>bti-to-png.bat</code>” for example):</p>
+
+<div class="longCode">
+	<p>wimgt copy %1 "%~dp1%~n1.png" --no-mm</p>
+	<p>pause</p>
+</div>
+
+<p>- Then, just drag and drop the <b>BTI file</b> you want to convert into the <b>BATCH file</b> and a <b>PNG file</b> should create on the same place the <b>BTI file</b> dragged and dropped is.</p>
+
+<br>
+
+<br>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
