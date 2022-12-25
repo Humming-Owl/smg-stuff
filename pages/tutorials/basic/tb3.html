@@ -1,0 +1,181 @@
+<html>
+
+<head>
+
+<meta name= "viewport" content= "width=device-width" http-equiv="Content-Type"/>
+
+<title>Extract everything from an ARC / BMD/BDL file</title>
+
+<link rel="icon" type="image/png" href="../../../images/icon.png" />
+
+<link rel="stylesheet" href="../../../styles.css" type="text/css">
+
+</head>
+
+<body>
+
+<div class="start">
+
+<div class="title">
+
+<h1>Extract everything from an ARC / BMD/BDL file</h1> 
+
+</div>
+
+</div>
+
+<div class="main">
+
+<div class="right">
+
+<h3><b>Contents</b></h3>
+
+<hr>
+
+<p>1. <a href="../../../index.html">Introduction</a></p>
+
+<p>2. <a href="../../tutorials.html">Tutorials</a></p>
+
+<p>3. <a href="../../tools.html">Tools</a></p>
+
+<p>4. <a href="../../other_links.html">Other links</a></p>
+
+</div>
+
+<div class="left">
+
+<h2><b>Extract ARC file contents</b></h2>
+
+<hr>
+
+<p><b>Tools needed:</b></p>
+
+<p>Refer to the "Tools" section for download.</p>
+
+<p>- Arc Convertor</p>
+<p>- Wine (for Linux only)</p>
+
+<hr>
+
+<h3><b>For Windows:</b></h3>
+
+<hr>
+
+<p>- Among the <b>Arc Convertor</b> files there is a folder named “<code>res</code>”, inside it there is a file called “<code>arcExtract.exe</code>” (<b>Fig. 1</b>).</p>
+
+<img src="../../../images/tb3/Fig. 1.png">
+
+<b><p class="idtext">(Fig. 1 - "<code>arcExtract.exe</code>" file location)</p></b>
+
+<br>
+
+<p>- Drag and drop that <b>ARC file</b> you want to extract into the “<code>arcExtract.exe</code>” file and the extracted files will appear in the same place the <b>ARC file</b> is (<b>Fig. 2</b>).</p>
+
+<img src="../../../images/tb3/Fig. 2.png">
+
+<b><p class="idtext">(Fig. 2 - Extracted files from ARC file)</p></b>
+
+<br>
+
+<hr>
+
+<h3><b>For Linux:</b></h3>
+
+<hr>
+
+<p>- As <b>Linux</b> does not execute <b>EXE files</b> natively you have to install <a href="https://www.winehq.org/">Wine</a> to be able to use the <b>Arc Convertor</b> tool.</p>
+
+<p>- With <b>Wine</b> and the “<code>arcExtract.exe</code>” file from the “<code>res</code>” folder of the <b>Arc Convertor</b> tool, open a terminal and execute the following command (<b>Fig. 3</b>):</p>
+
+<p><code>wine path/to/arcExtract.exe path/to/file.arc</code></p>
+
+<img src="../../../images/tb3/Fig. 3.png">
+
+<b><p class="idtext">(Fig. 3 - Command to extract contents from ARC file)</p></b>
+
+<br>
+
+<p>- All files within the <b>ARC file</b> will be extracted on the same path the <b>ARC file</b> is (<b>Fig. 4</b>).</p>
+
+<img src="../../../images/tb3/Fig. 4.png">
+
+<b><p class="idtext">(Fig. 4 - Extracted files from ARC file)</p></b>
+
+<br>
+
+<hr>
+
+<h2><b>Extract BMD/BDL file contents</b></h2>
+
+<hr>
+
+<p><b>Tools needed:</b></p>
+
+<p>Refer to the "Tools" section for download.</p>
+
+<p>- SuperBMD</p>
+<p>- Wine (for Linux only)</p>
+
+<hr>
+
+<h3><b>For Windows:</b></h3>
+
+<hr>
+
+<p>- Among the <b>SuperBMD</b> files there is a file named “<code>SuperBMD.exe</code>” (<b>Fig. 5</b>).</p>
+
+<img src="../../../images/tb3/Fig. 5.png">
+
+<b><p class="idtext">(Fig. 5 - "<code>SuperBMD.exe</code>" file location)</p></b>
+
+<br>
+
+<p>- Drag and drop the <b>BMD/BDL file</b> into the “<code>SuperBMD.exe</code>” file and the extracted files will appear in the same place the <b>BMD/BDL file</b> is (<b>Fig. 6</b>).</p>
+
+<img src="../../../images/tb3/Fig. 6.png">
+
+<b><p class="idtext">(Fig. 6 - Extracted files from BDL file)</p></b>
+
+<br>
+
+<hr>
+
+<h3><b>For Linux:</b></h3>
+
+<hr>
+
+<p>- As <b>Linux</b> does not execute <b>EXE files</b> natively you have to install <a href="https://www.winehq.org/">Wine</a> to be able to use <b>SuperBMD</b>.</p>
+
+<p>- With <b>Wine</b> and the “<code>SuperBMD.exe</code>” file among the <b>SuperBMD</b> files, open a terminal and execute the following command (<b>Fig. 7</b>):</p>
+
+<p><code>wine path/to/SuperBMD.exe path/to/bmd-or-bdl-file</code></p>
+
+<img src="../../../images/tb3/Fig. 7.png">
+
+<b><p class="idtext">(Fig. 7 - Command to extract contents from BMD/BDL file)</p></b>
+
+<br>
+
+<p>- All files within the <b>BMD/BDL file</b> will be extracted on the same path the <b>BMD/BDL file</b> is (<b>Fig. 8</b>).</p>
+
+<img src="../../../images/tb3/Fig. 8.png">
+
+<b><p class="idtext">(Fig. 8 - Extracted files from BDL file)</p></b>
+
+<br>
+
+<br>
+
+<hr>
+
+<p><b>Note:</b> for some reason <b>SuperBMD</b> didn't work with an absolute path, I got it working with a relative one as the one shown on <b>Fig. 8</b>.</p>
+
+<br>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
