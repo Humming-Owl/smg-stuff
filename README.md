@@ -1,5 +1,6 @@
 # Changelog
 
+- Added tutorial on how to replace BMD/BDL model textures with j3dview.
 - Added Tutorial on how to extract the contents of an ARC and BMD/BDL files (Arc Convertor and SuperBMD).
 - Added Tutorial on how to convert a PNG image into a BTI and viceversa with WST.
 - Added Tutorial on how to get a SMG1 dump with WIT.
