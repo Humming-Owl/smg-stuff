@@ -1,5 +1,6 @@
 # Changelog
 
+- Added Blenxy an application template for Blender 2.79b for SMG modeling (honest work tbh).
 - Added tutorial on how to replace BMD/BDL model textures with j3dview.
 - Added Tutorial on how to extract the contents of an ARC and BMD/BDL files (Arc Convertor and SuperBMD).
 - Added Tutorial on how to convert a PNG image into a BTI and viceversa with WST.
